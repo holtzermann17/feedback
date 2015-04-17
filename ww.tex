@@ -1,6 +1,7 @@
-\documentclass{llncs}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+\documentclass{article}
+
+\usepackage{ijcai15}
+\usepackage{times}
 
 %% \usepackage{fontspec}
 %% \newfontfamily{\tam}[Script=Tamil]{Lohit Tamil}
@@ -60,13 +61,12 @@ inner ysep=10pt
 \begin{document}
 
 % TITLE INFORMATION
-\title{Emergent design in a computational context}
+\title{Emergent design in a computational context\\
+{\small{[}Or some other more suitable title!{]}}}
 
-\author{Joseph Corneli\inst{1} and Anna Jordanous\inst{2}}
-
-\institute{Department of Computing, Goldsmiths College, University of London
-\and
-School of Computing, University of Kent}
+\author{Joseph Corneli\textsuperscript{1} and Anna Jordanous\textsuperscript{2}\\
+\textsuperscript{1} Department of Computing, Goldsmiths College, University of London\\
+\textsuperscript{2} School of Computing, University of Kent}
 
 \date{today}
 
@@ -81,10 +81,6 @@ sort in multi-agent systems that learn by sharing and discussing
 partial understandings.  Building on earlier theoretical work, we
 describe concrete implementation plans and some preliminary results.
 %
-\keywords{serendipity,
-design patterns,
-intelligent machinery,
-Writers Workshops}
 \end{abstract}
 
 \section{Introduction} \label{sec:introduction}
@@ -209,53 +205,54 @@ into the process of peer reviewing journal articles for the new \emph{Journal of
   Computational Creativity}\footnote{\url{http://www.journalofcomputationalcreativity.cc}}.
 
 \begin{table}[p]
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Successful error}} & \\
-\emph{Van Andel's example}: & Post-it\texttrademark\ notes \\[.2cm]
-{\tt presentation}& Systems should be prepared to share interesting ideas even if they don't know directly how they will be useful.  \\
-{\tt listening}   & Systems should listen with interest, too. \\
-{\tt feedback}    & Even interesting ideas may not be ``marketable.''\\
-{\tt questions}   & How is your suggestion useful? \\
-{\tt reflections} & New combinations of ideas take a long time to realise, and many different ideas may need to be combined in order to come up with something useful.\\
+\begin{tabular}{p{.95\columnwidth}}
+{\bf\emph{Successful error}}  \\
+\emph{Van Andel's example}:  Post-it\texttrademark\ notes \\[.2cm]
+{\tt presentation} Systems should be prepared to share interesting ideas even if they don't know directly how they will be useful.  \\
+{\tt listening}    Systems should listen with interest, too. \\
+{\tt feedback}     Even interesting ideas may not be ``marketable.''\\
+{\tt questions}    How is your suggestion useful? \\
+{\tt reflections}  New combinations of ideas take a long time to realise, and many different ideas may need to be combined in order to come up with something useful.\\
 \end{tabular}
-\bigskip
+\medskip
 
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Side effect}} & \\
-\emph{Van Andel's example}: & Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
-{\tt presentation}& Systems should use their presentation as an experiment. \\
-{\tt listening}   & Listeners should allow themselves to be affected by what they are hearing. \\
-{\tt feedback}    & Feedback should convey the nature of the effect.\\
-{\tt questions}   & The presenter may need to ask follow-up questions to gain insight. \\
-{\tt reflections} & Form a new hypothesis before seeking a new audience. \\
+\begin{tabular}{p{.95\columnwidth}}
+{\bf\emph{Side effect}}  \\
+\emph{Van Andel's example}:  Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
+{\tt presentation} Systems should use their presentation as an experiment. \\
+{\tt listening}    Listeners should allow themselves to be affected by what they are hearing. \\
+{\tt feedback}     Feedback should convey the nature of the effect.\\
+{\tt questions}    The presenter may need to ask follow-up questions to gain insight. \\
+{\tt reflections}  Form a new hypothesis before seeking a new audience. \\
 \end{tabular}
-\bigskip
+\medskip
 
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Wrong hypothesis}} & \\
-\emph{Van Andel's example}: & Lithium, used in a control study, had an unexpected calming effect. \\[.2cm]
-{\tt presentation}& How is this presentation interpretable as a (``natural'') control study? \\
-{\tt listening}   & Listeners are ``guinea pigs''.\\
-{\tt feedback}    & Discuss side-effects that do not necessarily correspond to the author's perceived intent. \\
-{\tt questions}   & Zero in on the most interesting part of the conversation.\\
-{\tt reflections} & Revise hypotheses to correspond to the most surprising feedback. \\
+\begin{tabular}{p{.95\columnwidth}}
+{\bf\emph{Wrong hypothesis}}  \\
+\emph{Van Andel's example}:  Lithium, used in a control study, had an unexpected calming effect. \\[.2cm]
+{\tt presentation} How is this presentation interpretable as a (``natural'') control study? \\
+{\tt listening}    Listeners are ``guinea pigs''.\\
+{\tt feedback}     Discuss side-effects that do not necessarily correspond to the author's perceived intent. \\
+{\tt questions}    Zero in on the most interesting part of the conversation.\\
+{\tt reflections}  Revise hypotheses to correspond to the most surprising feedback. \\
 \end{tabular}
-\bigskip
+\medskip
 
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Outsider}} & \\
-\emph{Van Andel's example}: & A mother suggests a new hypothesis to a doctor. \\[.2cm]
-{\tt presentation}& The presenter is here to learn from the audience. \\
-{\tt listening}   & The audience is here to give help, but also to get help.\\
-{\tt feedback}    & Feedback will inevitably draw on previous experiences and ideas.\\
-{\tt questions}   & What is the basis for that remark?\\
-{\tt reflections} & How can I implement the suggestions?\\
+\begin{tabular}{p{.95\columnwidth}}
+{\bf\emph{Outsider}}  \\
+\emph{Van Andel's example}:  A mother suggests a new hypothesis to a doctor. \\[.2cm]
+{\tt presentation} The presenter is here to learn from the audience. \\
+{\tt listening}   The audience is here to give help, but also to get help.\\
+{\tt feedback}     Feedback will inevitably draw on previous experiences and ideas.\\
+{\tt questions}    What is the basis for that remark?\\
+{\tt reflections}  How can I implement the suggestions?\\
 \end{tabular}
 \vspace{.2cm}
 \caption{Reinterpreting patterns of serendipity for use in a computational workshop\label{tab:reinterpret}}
 \end{table}
 
-\begin{figure}[t]
+
+\begin{figure*}[t]
 \begin{center}
 \resizebox{.93\textwidth}{!}{
 \StickyNote[2.5cm]{myyellow}{{\LARGE {Interesting idea}} \\[4ex] {Surprise birthday party}}[3.8cm] \StickyNote[2.5cm]{mygreen}{{\Large I heard you say:} \\[4ex] {``surprise''} }[3.8cm]
@@ -267,17 +264,14 @@ into the process of peer reviewing journal articles for the new \emph{Journal of
 }
 \end{center}
 \caption{A paper prototype for applying the \emph{Successful Error} pattern\label{fig:paper-prototype}}
-\end{figure}
+\end{figure*}
 
 In order to facilitate this sort of interaction, it would be necessary
 for systems to implement a basic protocol related to
 %%
-\[
-\text{
 {\tt presentation}, {\tt listening}, {\tt
   feedback}, {\tt questions}, and {\tt
-  reflections}.}
-\]
+  reflections}.
 %%
 This protocol could be thought of as a light-weight template for
 creating design patterns that guide system-level participation in the
@@ -383,7 +377,7 @@ but protocols like the ones described above would be sufficient to
 make the experiment.
 
 \begin{center}
-\begin{minipage}{.9\textwidth}
+\begin{minipage}{.9\columnwidth}
 \begin{dialogue}
 \speak{Flow} ``\emph{I hear the souls of the
   damned waiting in hell. / I feel a malevolent
@@ -421,7 +415,7 @@ without making reference to another poem.
 Here's how the discussion might continue, if the systems go on to
 examine the next few lines of the poem.
 \begin{center}
-\begin{minipage}{.9\textwidth}
+\begin{minipage}{.9\columnwidth}
 \begin{dialogue}
 \speak{Flow} ``\emph{Is God willing to prevent evil, but not able? / Then he is not omnipotent / Is he able, but not willing? / Then he is malevolent.}''
 %
@@ -446,7 +440,7 @@ metaphor in the poem.
 \paragraph{Writers Workshop: Result.} 
 
 \begin{center}
-\begin{minipage}{.9\textwidth}
+\begin{minipage}{.9\columnwidth}
 \begin{dialogue}
 \speak{Flow} Thank you for your feedback.  My only question is, System
 B, how did you come up with that analogy?  It's quite clever.
