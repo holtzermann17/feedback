@@ -51,14 +51,16 @@ inner ysep=10pt
 \urldef{\mailsa}\path|{j.corneli,s.colton}@gold.ac.uk|
 \urldef{\mailsb}\path|a.pease@dundee.co.uk|
 
+\newcommand{\Fw}{{\sf FloWr}}
+\newcommand{\dec}[1]{\raisebox{.2ex}{$\star$}#1\raisebox{.2ex}{$\star$}}
+
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
 \begin{document}
 
 % TITLE INFORMATION
-\title{Emergent design in a computational context\\
-{\small{[}Or some other more suitable title!{]}}}
+\title{Implementing feedback in creative systems}
 
 \author{Joseph Corneli\textsuperscript{1} and Anna Jordanous\textsuperscript{2}\\
 \textsuperscript{1} Department of Computing, Goldsmiths College, University of London\\
@@ -69,15 +71,110 @@ inner ysep=10pt
 \maketitle
 
 \begin{abstract} 
-Various social strategies, ranging from Writers Workshops to open
-source software, pair programming, and design charettes have been
-developed to exploit emergent effects and to develop new shared
-language.  We investigate the feasibility of using designs of this
-sort in multi-agent systems that learn by sharing and discussing
-partial understandings.  Building on earlier theoretical work, we
-describe concrete implementation plans and some preliminary results.
-%
+% First attempt
+%% Various social strategies, ranging from Writers Workshops to open
+%% source software, pair programming, and design charettes have been
+%% developed to exploit emergent effects and to develop new shared
+%% language.  We investigate the feasibility of using designs of this
+%% sort in multi-agent systems that learn by sharing and discussing
+%% partial understandings.  Building on earlier theoretical work, we
+%% describe concrete implementation plans and some preliminary results.
 \end{abstract}
+
+\section*{\emph{Outline}} \label{sec:outline}
+
+{\small
+\begin{enumerate}[start=0,label=\textbf{\arabic*}]
+\item \textbf{\emph{Implementing feedback in creative systems: a writers
+  workshop approach.}}
+\item[] Contributions:
+\begin{enumerate}
+\item \emph{Introduce} the writers workshop as a model for learning
+  from feedback; and
+\item \emph{Survey} the aspects of feedback that can be offered, and
+  how they can be interpreted; and
+\item \emph{Present} a case study on how to implement this, at a level
+  that other people could use to implement similar Workshop designs in
+  their own creative systems.
+\end{enumerate}
+\item \textbf{Here is the writers workshop idea.}
+\item[] The steps:
+\begin{enumerate}
+\item A: {\tt presentation}
+\item C: {\tt listening}
+\item C: {\tt feedback} ({\tt observations}{\tt+}{\tt suggestions})
+\item A: {\tt questions}
+\item C: {\tt replies}
+\item A: {\tt reflections}
+\end{enumerate}
+\item[] Previous applications:
+\begin{enumerate}[label=(\roman*)]
+\item We sketched a ``theory of poetics rooted in the making of
+  boundary-crossing objects and processes''
+\item We ``described a system that can (sometimes) make `highly
+  serendipitous' creative advances in computer poetry'' while
+  ``drawing attention to theoretical questions related to program
+  design in an autonomous programming context.''
+\end{enumerate}
+\item \textbf{Here we refine the idea and turn it into a general model
+  that for incorporating feedback within computational models of the
+  creative process.}
+\item[] What can feedback be about? \dec{Survey}
+\begin{enumerate}
+\item Patterns that \emph{match} and any \emph{exceptions}
+\item Progress relative to explicit or adduced \emph{exploration}
+  (knowledge and accuracy) or \emph{exploitation} (directional,
+  task-based) goals.
+\item \emph{Quantity}, \emph{Variety}, and \emph{Order} of produced
+  objects or behaviours
+\item New relationships among produced objects and behaviours drawing
+  on a common field of reference
+\end{enumerate}
+\item[] How can feedback be understood and used? \dec{Survey}
+\begin{enumerate}
+\item Update knowledge base with new facts (accept statements,
+  possibly with provenance)
+\item Note similarity to \emph{iterative development}
+\item Reflection: describe relationships between produced objects and
+  behaviours and feedback
+\item Reflection: Higher-order patterns e.g.~new patterns that
+  describe the identified exceptions
+\end{enumerate}
+\item \textbf{As we happened to be working with \Fw\ to model the
+  creative process, we will use \Fw\ as a case study to exemplify how
+  to implement this writers workshop model to use feedback within
+  being creative.}
+\item[] What can we give feedback about in this context?
+\begin{enumerate}
+\item \emph{Population of nodes}: what can they do?  what do we learn when a
+  new node is added?
+\item \emph{Population of flowcharts}: Simon and Alison have talked
+  about ``broken'' flowcharts; this suggests a sort of test-driven
+  development framework.
+\item \emph{Population of output texts}: how to generate commentary on
+  a generated artefact?
+\end{enumerate}
+\item[] How will the feedback be understood and used?
+\begin{enumerate}
+\item ?
+\item ?
+\item Connect commentary on a generated artefact with the code that
+  made that artefact.
+\end{enumerate}
+\item \textbf{Discussion of how this would work more generally in
+  computational creativity and perhaps in AI more generally.}
+\begin{enumerate}
+\item Feedback is the fundamental concept in \emph{cybernetics}.  \dec{Definition?}
+\item Feedback about feedback (\&c for higher orders) is relevant to thinking about \emph{learning} and \emph{communication}
+\item \emph{Creativity} is often envisaged as cyclical process (e.g.~Dickie's
+  art circle, Colton et al.~Iterative
+  Development Expression Appreciation).  There are opportunities for
+  embedded feedback at each step, and the process itself is ``akin
+  to'' a feedback loop.
+\end{enumerate}
+\item \textbf{Conclusion: we have described a \emph{general} and \emph{computationally feasible} model for learning from feedback.}
+\end{enumerate}
+}
 
 \section{Introduction} \label{sec:introduction}
 
@@ -255,7 +352,7 @@ into the process of peer reviewing journal articles for the new \emph{Journal of
 \StickyNote[2.5cm]{pink}{{\Large Feedback:} \\[4ex] {I don't like surprises}}[3.8cm]
 }
 \resizebox{.61\textwidth}{!}{
-\StickyNote[2.5cm]{myorange}{{\LARGE {Question}} \\[4ex] {Not even a little bit?\ldots}}[3.8cm]
+\StickyNote[2.5cm]{myorange}{{\LARGE {Question}} \\[4ex] {Not even a little bit$\ldots$?}}[3.8cm]
 \quad \raisebox{-.2cm}{\StickyNote[2.5cm]{myblue}{{\LARGE Note to self:} \\[4ex] {(Try smaller surprises \\ next time.)}}[3.8cm]}
 }
 \end{center}
@@ -291,7 +388,7 @@ be judged in terms of the criteria described in Section
 \ref{sec:evaluation-criteria}.
 
 We would need a neutral environment that is not hard to develop for:
-the {\sf FloWr} system described in Section \ref{sec:foundations}
+the \Fw\ system described in Section \ref{sec:foundations}
 offers one such possibility.  With this system, the basic operating
 logic of the Workshop could be spelled out as a flowchart, and
 contributing systems could use flowcharts as the basic medium for
@@ -361,7 +458,7 @@ e.g. to switch from writing poems to writing programs.
 
 Here's what might happen in a discussion of the first few lines of
 ``On Being Malevolent,'' written by an early user-defined flow chart
-in the {\sf FloWr} system (known at the time as {\sf Flow})
+in the \Fw\ system (known at the time as {\sf Flow})
 \cite{colton-flowcharting}.  Note that for this dialogue to be
 possible, it would presumably have to be conducted within a
 lightweight process language, as discussed above.  Nevertheless, for
