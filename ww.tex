@@ -79,13 +79,7 @@ inner ysep=10pt
 %% sort in multi-agent systems that learn by sharing and discussing
 %% partial understandings.  Building on earlier theoretical work, we
 %% describe concrete implementation plans and some preliminary results.
-\end{abstract}
-
-\section*{\emph{Outline}} \label{sec:outline}
-
-{\small
-\begin{enumerate}[start=0,label=\textbf{\arabic*}]
-\item \textbf{\emph{Implementing feedback in creative systems: a writers
+\textbf{\emph{Implementing feedback in creative systems: a writers
   workshop approach.}}
 \item[] Contributions:
 \begin{enumerate}
@@ -97,86 +91,15 @@ inner ysep=10pt
   that other people could use to implement similar Workshop designs in
   their own creative systems.
 \end{enumerate}
-\item \textbf{Here is the writers workshop idea.}
-\item[] The steps:
-\begin{enumerate}
-\item A: {\tt presentation}
-\item C: {\tt listening}
-\item C: {\tt feedback} ({\tt observations}{\tt+}{\tt suggestions})
-\item A: {\tt questions}
-\item C: {\tt replies}
-\item A: {\tt reflections}
-\end{enumerate}
-\item[] Previous applications:
-\begin{enumerate}[label=(\roman*)]
-\item We sketched a ``theory of poetics rooted in the making of
-  boundary-crossing objects and processes''
-\item We ``described a system that can (sometimes) make `highly
-  serendipitous' creative advances in computer poetry'' while
-  ``drawing attention to theoretical questions related to program
-  design in an autonomous programming context.''
-\end{enumerate}
-\item \textbf{Here we refine the idea and turn it into a general model
-  that for incorporating feedback within computational models of the
-  creative process.}
-\item[] What can feedback be about? \dec{Survey}
-\begin{enumerate}
-\item Patterns that \emph{match} and any \emph{exceptions}
-\item Progress relative to explicit or adduced \emph{exploration}
-  (knowledge and accuracy) or \emph{exploitation} (directional,
-  task-based) goals.
-\item \emph{Quantity}, \emph{Variety}, and \emph{Order} of produced
-  objects or behaviours
-\item New relationships among produced objects and behaviours drawing
-  on a common field of reference
-\end{enumerate}
-\item[] How can feedback be understood and used? \dec{Survey}
-\begin{enumerate}
-\item Update knowledge base with new facts (accept statements,
-  possibly with provenance)
-\item Note similarity to \emph{iterative development}
-\item Reflection: describe relationships between produced objects and
-  behaviours and feedback
-\item Reflection: Higher-order patterns e.g.~new patterns that
-  describe the identified exceptions
-\end{enumerate}
-\item \textbf{As we happened to be working with \Fw\ to model the
-  creative process, we will use \Fw\ as a case study to exemplify how
-  to implement this writers workshop model to use feedback within
-  being creative.}
-\item[] What can we give feedback about in this context?
-\begin{enumerate}
-\item \emph{Population of nodes}: what can they do?  what do we learn when a
-  new node is added?
-\item \emph{Population of flowcharts}: Simon and Alison have talked
-  about ``broken'' flowcharts; this suggests a sort of test-driven
-  development framework.
-\item \emph{Population of output texts}: how to generate commentary on
-  a generated artefact?
-\end{enumerate}
-\item[] How will the feedback be understood and used?
-\begin{enumerate}
-\item ?
-\item ?
-\item Connect commentary on a generated artefact with the code that
-  made that artefact.
-\end{enumerate}
-\item \textbf{Discussion of how this would work more generally in
-  computational creativity and perhaps in AI more generally.}
-\begin{enumerate}
-\item Feedback is the fundamental concept in \emph{cybernetics}.  \dec{Definition?}
-\item Feedback about feedback (\&c for higher orders) is relevant to thinking about \emph{learning} and \emph{communication}
-\item \emph{Creativity} is often envisaged as cyclical process (e.g.~Dickie's
-  art circle, Colton et al.~Iterative
-  Development Expression Appreciation).  There are opportunities for
-  embedded feedback at each step, and the process itself is ``akin
-  to'' a feedback loop.
-\end{enumerate}
-\item \textbf{Conclusion: we have described a \emph{general} and \emph{computationally feasible} model for learning from feedback.}
-\end{enumerate}
-}
+\end{abstract}
 
-\include{oldtext}
+\input{oldtext}
+
+\include{background}
+\include{survey}
+\include{case-study}
+\include{discussion}
+\include{conclusion}
 
 \bibliographystyle{apacite}
 \bibliography{./biblio}
