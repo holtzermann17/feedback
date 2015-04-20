@@ -226,13 +226,17 @@ In educational applications it would be useful to have an automated tutor that c
 
 In the current paper, we ``flip the script'' and look at what we believe to be a more fundamental problem for AI: computer programs that can themselves learn from feedback.  After all, if it was easy to build great automatic tutors, they would be a part of everyday life.  We look forward to a future when that is the case.
 
-Current computer programs are able to identify patterns and ``close matches'' in data sets from certain domains, like music (David Meredith).  Learning \emph{new} patterns on the fly is harder but potentially quite useful.
+Computational creativity is a challenge within artificial intelligence where feedback plays a vital part [REFS***] \cite{perezyperez10MM,pease10}. Creativity cannot happen in a `silo' but instead is influenced and affected by feedback and interaction with others \cite{csik88,saunders12}. Computational creativity researchers are starting to place more emphasis on social interaction and feedback by computational systems [***EVIDENCE ***]. Still, nearly 3 in 4 papers at the 2014 International Conference for Computational Creativity\footnote{ICCC is  the key international conference for research in computational creativity.} failed to acknowledge the role of feedback or social communication in their computational work on creativity. 
 
-Considering the case of feedback on student papers, there are many ways to be wrong (and, often, depending on the subject, many ways to be right as well).  For example, the work might contain a typo, rendering it incorrect at the lexical level.  It might contain a grammatical error, while being logically sound.  A given piece of argumentation may be logically sound, but not practically useful.   The work may be correct on all of these levels, and still fail to communicate due to ineffective exposition.  Finally, even a masterful, correct, spellchecked piece of argumentation may not invite further dialogue, and so may fail to open itself to further learning.
+To highlight and contribute towards modelling feedback as a crucial part of creativity, we propose in this paper a model of computational feedback for creative systems based on Writers Workshops \cite{gabriel2002writer}, a literary collaborative practice that encourages interactive feedback within the creative process. We introduce Writers Workshops (Section \ref{sec:writers-workshop}), discuss their usefulness as a candidate for a computational model of feedback (Section \ref{sec:ww-analysis}) and propose such a model (Section \ref{sec:ww-model}). We reflect on how this model fits with related work encouraging serendipity and emergence in computational models of intelligence and creativity \ref{sec:ww-serendipity}. 
+While we acknowledge that this paper is offering a roadmap for this model rather than a full implementation, we consider how the model could be practically implemented in a computational system and report our initial implementation work (Section \ref{sec:implementation}). %Current computer programs are able to identify patterns and ``close matches'' in data sets from certain domains, like music (David Meredith).  Learning \emph{new} patterns on the fly is harder but potentially quite useful. 
+% AJ Don't see what this adds?
 
-Before we can learn from AI systems, we will have to teach them -- and learn how to learn together with them.  Accordingly, we \emph{design for emergence}.  (Say more.)
 
-\section{Design for emergence} \label{sec:writers-workshop}
+%Before we can learn from AI systems, we will have to teach them -- and learn how to learn together with them.  Accordingly, we \emph{design for emergence}.  (Say more.)
+% AJ in this community, we need to be careful talking about emergence. It's been studied a lot and we'd need to reference a whole heap of work... Hence a suggested change in title below and above
+
+\section{The Writers Workshop} \label{sec:writers-workshop}
 
 Richard Gabriel \citeyear{gabriel2002writer} describes the practise of
 Writers Workshops that has been put to use for over a decade within
@@ -359,6 +363,18 @@ into the process of peer reviewing journal articles for the new \emph{Journal of
 \caption{A paper prototype for applying the \emph{Successful Error} pattern\label{fig:paper-prototype}}
 \end{figure*}
 
+\section{Considering the Writers Workshop as a model of feedback in computational creativity, and AI more generally}\label{sec:ww-analysis}
+
+Considering the case of feedback on student papers, there are many ways to be wrong (and, often, depending on the subject, many ways to be right as well).  
+% There's a reference here on types of error, but I can't quite remember it. 
+For example, the work might contain a typo, rendering it incorrect at the lexical level.  It might contain a grammatical, syntactical or semantic error, while being logically sound.  A given piece of argumentation may be logically sound, but not practically useful.   The work may be correct on all of these levels, and still fail to communicate due to ineffective exposition.  Finally, even a masterful, correct, spellchecked piece of argumentation may not invite further dialogue, and so may fail to open itself to further learning.
+
+The Writers Workshop potentially could uncover all of these types of error, depending on the feedback produced by participants. In particular, it is the last of the above points that differentiates the Writers Workshop; a lack of further dialogue in the Workshop highlights by itself a flaw with the work, particularly when a piece of creative work is intended to provoke interpretative thoughts and comments. 
+
+**MOVE SERENDIPITY + WW HERE
+
+\section{Computational Model of feedback based on writers workshop}\label{sec:ww-model}
+
 In order to facilitate this sort of interaction, it would be necessary
 for systems to implement a basic protocol related to
 %%
@@ -418,6 +434,8 @@ pragmatic basis, if the Workshop proved quite useful to participants,
 it could be revised to run monthly, weekly, or
 continuously.\footnote{For a comparison case in computer Go, see
   \url{http://cgos.computergo.org/}.}
+
+
 
 \section{Embedded evaluation (Case study: Writers Workshop)}
 
@@ -550,7 +568,7 @@ systems (and their developers).  Indeed, the workshop session might
 have gone better if the systems had focused on exchanging and
 discussing more formal objects throughout.
 
-\section{Implementation plans and preliminary results}
+\section{Implementation plans and preliminary results}\label{sec:implementation}
 
 Add $\approx$1 page...
 
