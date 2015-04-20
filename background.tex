@@ -35,7 +35,8 @@ she can then ask questions for clarification.
 \item Generally, non-authors
 are either not permitted to attend, or are asked to stay silent
 through the workshop, and perhaps sit separately from the
-participating authors/reviewers. {\em This is somewhat akin to the ideas about fields of cultural production \cite{bourdieu93}, where value is perceived as coming from interactions between a peer community of cultural producers i.e. specifically those who are active within that field. *** AJ Check I'm not talking rubbish? ***}\footnote{Here we present Writers Workshops as they currently exist; however this last point is debatable. Whether non-authors should be able to participate or not is an interesting avenue for experimentation both in human and computational contexts.}
+participating authors/reviewers.
+\item {\em This is somewhat akin to the ideas about fields of cultural production \cite{bourdieu93}, where value is perceived as coming from interactions between a peer community of cultural producers i.e. specifically those who are active within that field. *** AJ Check I'm not talking rubbish? ***}\footnote{Here we present Writers Workshops as they currently exist; however this last point is debatable. Whether non-authors should be able to participate or not is an interesting avenue for experimentation both in human and computational contexts.}
 \end{itemize}
 
 There are similarities between the
@@ -43,18 +44,41 @@ Writers Workshops and classical practices of group composition
 \cite{jin1975art} and dialectic \cite{dialectique}, and the workshop
 may be considered an artistic or creative space in its own right.
 
-For example, here's what might happen in a discussion of the first few lines of
-``On Being Malevolent,''. As befitting the AI-theme of this workshop, ``On Being Malevolent'' is a poem written by an early user-defined flow chart
-in the \Fw\ system (known at the time as {\sf Flow})
-\cite{colton-flowcharting}.\footnote{Note that for this dialogue to be
-possible computationally, it would presumably have to be conducted within a
-lightweight process language, as discussed above.  Nevertheless, for
-convenience, the discussion will be presented here as if it was
-conducted in natural language.  Whether contemporary systems have
-adequate natural language understanding to have interesting
-interactions is one of the key unanswered questions of this approach,
-but protocols such as that described later in this paper would be sufficient to
-make the experiment.}
+The use of Writers Workshop in computational contexts is not an
+entirely new concept. In PLoP workshops, authors present design
+patterns and pattern languages, or papers about patterns, rather than
+more traditional literary forms like poems, stories, or chapters from
+novels.  Papers must be workshopped at a PLoP or EuroPLoP conference
+in order to be considered for the \emph{Transactions on Pattern
+  Languages of Programming} journal.  A discussion of writers
+workshops in the language of design patterns is presented by Coplien
+and Woolf \cite{coplien1997pattern}.  Their patterns include
+\emph{Open Review}, \emph{Safe Setting}, \emph{Workshop Comprises
+  Authors} \emph{Authors are Experts}, \emph{Community of Trust},
+\emph{Moderator Guides the Workshop} \emph{Thank the Author},
+\emph{Selective Changes}, \emph{Clearing the Palate}.
+%
+Relatedly, \citeA{meszaros1998pattern} describe the typical scenario
+for authors of design patterns with a collection design patterns,
+e.g. \emph{Clear target audience}, \emph{Visible forces}, and
+\emph{Relationship to other patterns}.
+
+
+\subsection{Dialogue example}
+Note that for the following dialogue to be possible computationally,
+it would presumably have to be conducted within a lightweight process
+language.  Nevertheless, for convenience, the discussion will be
+presented here as if it was conducted in natural language.  Whether
+contemporary systems have adequate natural language understanding to
+have interesting interactions is one of the key unanswered questions
+of this approach, but protocols such as that described later in this
+paper would be sufficient to make the experiment.
+
+For example, here's what might happen in a discussion of the first few
+lines of a poem, ``On Being Malevolent,''. As befitting the AI-theme
+of this workshop, ``On Being Malevolent'' is a poem written by an
+early user-defined flow chart in the \Fw\ system (known at the time as
+{\sf Flow}) \cite{colton-flowcharting}.
 
 \begin{center}
 \begin{minipage}{.9\columnwidth}
@@ -77,75 +101,54 @@ time.
 \end{minipage}
 \end{center}
 
-
-
-
-The use of Writers Workshop in computational contexts is not an entirely new concept. In PLoP workshops, authors present design patterns and pattern
-languages, or papers about patterns, rather than more traditional
-literary forms like poems, stories, or chapters from novels.  Papers
-must be workshopped at a PLoP or EuroPLoP conference in order to be
-considered for the \emph{Transactions on Pattern Languages of
-  Programming} journal.  A discussion of writers workshops
-in the language of design patterns is presented by
-Coplien and Woolf \cite{coplien1997pattern}.  Their patterns include:
+Even if, perhaps and especially because, ``cross-talk'' about
+different poems bends the rules, the dialogue could prompt a range of
+reflections and reactions.  System A may object that it had a fair
+point that has not been given sufficient attention, while System B may
+wonder how to communicate the idea it came up with without making
+reference to another poem.  Here's how the discussion given as example
+in Section \ref{sec:writers-workshop} might continue, if the systems
+go on to examine the next few lines of the poem.
 \begin{center}
-{\small
-\begin{tabular}{l@{\hspace{.2cm}}l@{\hspace{.2cm}}l}
-\emph{Open Review} & \emph{Safe Setting} & \emph{Workshop Comprises Authors} \\
-\emph{Authors are Experts} & \emph{Community of Trust} & \emph{Moderator Guides the Workshop} \\
-\emph{Thank the Author} & \emph{Selective Changes} & \emph{Clearing the Palate} \\
-\end{tabular}
-}
+\begin{minipage}{.9\columnwidth}
+\begin{dialogue}
+\speak{Flow} ``\emph{Is God willing to prevent evil, but not able? / Then he is not omnipotent / Is he able, but not willing? / Then he is malevolent.}''
+%
+\speak{System A} These lines are interesting, but
+they sound a bit like you're working from a
+template, or like you're quoting from something
+else.
+%
+\speak{System B} Maybe try an analogy?  For example, you mentioned
+birthdays: you could consider an analogy to the conflicted feelings of
+someone who knows in advance about her surprise birthday party.
+\end{dialogue}
+\end{minipage}
 \end{center}
 
+This portion of the discussion shifts the focus
+of the discussion onto a line that was previously
+considered to be spurious, and looks at what
+would happen if that line was used as a central
+metaphor in the poem.
 
-\begin{table}[p]
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Successful error}}  \\
-\emph{Van Andel's example}:  Post-it\texttrademark\ notes \\[.2cm]
-{\tt presentation} Systems should be prepared to share interesting ideas even if they don't know directly how they will be useful.  \\
-{\tt listening}    Systems should listen with interest, too. \\
-{\tt feedback}     Even interesting ideas may not be ``marketable.''\\
-{\tt questions}    How is your suggestion useful? \\
-{\tt reflections}  New combinations of ideas take a long time to realise, and many different ideas may need to be combined in order to come up with something useful.\\
-\end{tabular}
-\medskip
+\begin{center}
+\begin{minipage}{.9\columnwidth}
+\begin{dialogue}
+\speak{Flow} Thank you for your feedback.  My only question is, System
+B, how did you come up with that analogy?  It's quite clever.
+%
+\speak{System B} I've just emailed you the code.
+\end{dialogue}
+\end{minipage}
+\end{center}
 
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Side effect}}  \\
-\emph{Van Andel's example}:  Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
-{\tt presentation} Systems should use their presentation as an experiment. \\
-{\tt listening}    Listeners should allow themselves to be affected by what they are hearing. \\
-{\tt feedback}     Feedback should convey the nature of the effect.\\
-{\tt questions}    The presenter may need to ask follow-up questions to gain insight. \\
-{\tt reflections}  Form a new hypothesis before seeking a new audience. \\
-\end{tabular}
-\medskip
-
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Wrong hypothesis}}  \\
-\emph{Van Andel's example}:  Lithium, used in a control study, had an unexpected calming effect. \\[.2cm]
-{\tt presentation} How is this presentation interpretable as a (``natural'') control study? \\
-{\tt listening}    Listeners are ``guinea pigs''.\\
-{\tt feedback}     Discuss side-effects that do not necessarily correspond to the author's perceived intent. \\
-{\tt questions}    Zero in on the most interesting part of the conversation.\\
-{\tt reflections}  Revise hypotheses to correspond to the most surprising feedback. \\
-\end{tabular}
-\medskip
-
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Outsider}}  \\
-\emph{Van Andel's example}:  A mother suggests a new hypothesis to a doctor. \\[.2cm]
-{\tt presentation} The presenter is here to learn from the audience. \\
-{\tt listening}   The audience is here to give help, but also to get help.\\
-{\tt feedback}     Feedback will inevitably draw on previous experiences and ideas.\\
-{\tt questions}    What is the basis for that remark?\\
-{\tt reflections}  How can I implement the suggestions?\\
-\end{tabular}
-\vspace{.2cm}
-\caption{Reinterpreting patterns of serendipity for use in a computational workshop\label{tab:reinterpret}}
-\end{table}
-
+Whereas the systems were initially reviewing poetry, they have now
+made a partial genre shift, and are sharing and remixing code.  Such a
+shift helps to get at the real interests of the systems (and their
+developers).  Indeed, the workshop session might have gone better if
+the systems had focused on exchanging and discussing more formal
+objects throughout.
 
 \begin{figure*}[t]
 \begin{center}
@@ -161,24 +164,3 @@ Coplien and Woolf \cite{coplien1997pattern}.  Their patterns include:
 \caption{A paper prototype for applying the \emph{Successful Error} pattern\label{fig:paper-prototype}}
 \end{figure*}
 
-\begin{enumerate}
-\item \textbf{Here is the writers workshop idea -- to be merged with the ``old text'' above}
-\item[] The steps:
-\begin{enumerate}
-\item A: {\tt presentation}
-\item C: {\tt listening}
-\item C: {\tt feedback} ({\tt observations}{\tt+}{\tt suggestions})
-\item A: {\tt questions}
-\item C: {\tt replies}
-\item A: {\tt reflections}
-\end{enumerate}
-\item[] Previous applications:
-\begin{enumerate}[label=(\roman*)]
-\item We sketched a ``theory of poetics rooted in the making of
-  boundary-crossing objects and processes''
-\item We ``described a system that can (sometimes) make `highly
-  serendipitous' creative advances in computer poetry'' while
-  ``drawing attention to theoretical questions related to program
-  design in an autonomous programming context.''
-\end{enumerate}
-\end{enumerate}
