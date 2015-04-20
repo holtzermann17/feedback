@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  20 APR 2015 08:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  20 APR 2015 08:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -830,7 +830,7 @@ Package: xparse 2014/05/05 v4740 L3 Experimental document command parser
 LaTeX Warning: Unused global option(s):
     [letter].
 
-(./ww.aux)
+(./ww.aux (./oldtext.aux))
 \openout1 = `ww.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 60.
@@ -848,7 +848,8 @@ LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 60.
 LaTeX Font Info:    ... okay on input line 60.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 60.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 \AtBeginShipoutBox=\box79
@@ -960,130 +961,130 @@ pro-cess
 
 
 ]
-
-LaTeX Warning: Citation `perezyperez10MM' undefined on input line 229.
-
-
-LaTeX Warning: Citation `pease10' undefined on input line 229.
+\openout2 = `oldtext.aux'.
 
 
-LaTeX Warning: Citation `csik88' undefined on input line 229.
+(./oldtext.tex
+
+LaTeX Warning: Citation `perezyperez10MM' undefined on input line 135.
 
 
-LaTeX Warning: Citation `saunders12' undefined on input line 229.
+LaTeX Warning: Citation `pease10' undefined on input line 135.
+
+
+LaTeX Warning: Citation `csik88' undefined on input line 135.
+
+
+LaTeX Warning: Citation `saunders12' undefined on input line 135.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 231.
-
-LaTeX Warning: Reference `sec:ww-analysis' on page 2 undefined on input line 23
-1.
-
-
-LaTeX Warning: Reference `sec:ww-model' on page 2 undefined on input line 231.
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 137.
 
 LaTeX Warning: Reference `sec:ww-serendipity' on page 2 undefined on input line
- 231.
+ 137.
 
 
-Overfull \hbox (40.80904pt too wide) in paragraph at lines 277--283
+Overfull \hbox (40.80904pt too wide) in paragraph at lines 183--189
  [] 
  []
 
 
-Overfull \hbox (4.48851pt too wide) in paragraph at lines 302--302
+Overfull \hbox (4.48851pt too wide) in paragraph at lines 208--208
 [][][][]$\OT1/pcr/m/n/9 http :// www [] .journalofcomputationalcreativity []
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 306.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 212.
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--315
+Underfull \hbox (badness 10000) in paragraph at lines 211--221
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--326
+Underfull \hbox (badness 10000) in paragraph at lines 222--232
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--337
+Underfull \hbox (badness 10000) in paragraph at lines 233--243
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--348
+Underfull \hbox (badness 10000) in paragraph at lines 244--254
 [][]
  []
 
-[2]
+[2
+
+]
 
 LaTeX Warning: Reference `sec:evaluation-criteria' on page 3 undefined on input
- line 404.
+ line 310.
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 378--405
+Underfull \hbox (badness 1715) in paragraph at lines 284--311
 \OT1/ptm/m/n/10 In or-der to fa-cil-i-tate this sort of in-ter-ac-tion, it woul
 d
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 378--405
+Underfull \hbox (badness 1715) in paragraph at lines 284--311
 \OT1/ptm/m/n/10 re-lated to \OT1/pcr/m/n/10 presentation\OT1/ptm/m/n/10 , \OT1/
 pcr/m/n/10 listening\OT1/ptm/m/n/10 , \OT1/pcr/m/n/10 feedback\OT1/ptm/m/n/10 ,
 
  []
 
 
-LaTeX Warning: Reference `sec:foundations' on page 3 undefined on input line 40
-7.
+LaTeX Warning: Reference `sec:foundations' on page 3 undefined on input line 31
+3.
 
 
 Underfull \vbox (badness 2970) has occurred while \output is active []
 
  [3]
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 577--577
+Underfull \hbox (badness 10000) in paragraph at lines 483--483
 [][][][]$\OT1/pcr/m/n/9 https :// aestheticcomplexity [] .wordpress [] .com /
  []
 
-<./figures/artworld.jpg, id=185, 1226.5825pt x 701.62125pt>
+<./figures/artworld.jpg, id=195, 1226.5825pt x 701.62125pt>
 File: ./figures/artworld.jpg Graphic file (type jpg)
 
 <use ./figures/artworld.jpg>
-Package pdftex.def Info: ./figures/artworld.jpg used on input line 579.
+Package pdftex.def Info: ./figures/artworld.jpg used on input line 485.
 (pdftex.def)             Requested size: 243.91125pt x 139.51881pt.
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 579--580
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 485--486
 [][] 
  []
 
-<./figures/aesthetic-research.jpg, id=186, 1244.65pt x 779.91376pt>
+<./figures/aesthetic-research.jpg, id=196, 1244.65pt x 779.91376pt>
 File: ./figures/aesthetic-research.jpg Graphic file (type jpg)
 
 <use ./figures/aesthetic-research.jpg>
-Package pdftex.def Info: ./figures/aesthetic-research.jpg used on input line 58
-1.
+Package pdftex.def Info: ./figures/aesthetic-research.jpg used on input line 48
+7.
 (pdftex.def)             Requested size: 243.91125pt x 152.83826pt.
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 581--582
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 487--488
 [][] 
  []
 
-<./figures/quantity-variety-order.jpg, id=187, 1911.14pt x 681.54625pt>
+<./figures/quantity-variety-order.jpg, id=197, 1911.14pt x 681.54625pt>
 File: ./figures/quantity-variety-order.jpg Graphic file (type jpg)
 
 <use ./figures/quantity-variety-order.jpg>
 Package pdftex.def Info: ./figures/quantity-variety-order.jpg used on input lin
-e 583.
+e 489.
 (pdftex.def)             Requested size: 243.91125pt x 86.98178pt.
 
-Overfull \hbox (10.00002pt too wide) in paragraph at lines 583--584
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 489--490
 [][] 
  []
 
-(./ww.bbl
+) [5 <./figures/artworld.jpg> <./figures/aesthetic-research.jpg> <./figures/qua
+ntity-variety-order.jpg>] (./ww.bbl
 Missing character: There is no Ã in font pcrr7t!
 Missing character: There is no © in font pcrr7t!
 
@@ -1102,38 +1103,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--60
 \OT1/pcr/m/n/10 article&id = 1107085041&catid =
  []
 
-[5 <./figures/artworld.jpg> <./figures/aesthetic-research.jpg> <./figures/quant
-ity-variety-order.jpg>])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 588.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
  [6
 
+
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 588.
- (./ww.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 588.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 588.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
+ (./ww.aux (./oldtext.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 184.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package rerunfilecheck Info: File `ww.out' has not changed.
+(rerunfilecheck)             Checksum: 404D612A7039D49919CEF0D9E41B396C;587.
 
-
-Package rerunfilecheck Warning: File `ww.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `ww.out':
-(rerunfilecheck)             Before: A94F6A6EC8A5F97A326D1AF18C0508BF;354
-(rerunfilecheck)             After:  404D612A7039D49919CEF0D9E41B396C;587.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 588.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
  ) 
 Here is how much of TeX's memory you used:
- 25210 strings out of 493117
- 504215 string characters out of 6135432
- 585024 words of memory out of 5000000
- 28163 multiletter control sequences out of 15000+600000
+ 25220 strings out of 493117
+ 504326 string characters out of 6135432
+ 585688 words of memory out of 5000000
+ 28166 multiletter control sequences out of 15000+600000
  44637 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,82p,10401b,879s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1159,10 +1151,10 @@ t/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/ty
 pe1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on ww.pdf (6 pages, 252438 bytes).
+Output written on ww.pdf (6 pages, 252556 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 222 compressed objects within 3 object streams
+ 267 PDF objects out of 1000 (max. 8388607)
+ 228 compressed objects within 3 object streams
  75 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 188 words of extra memory for PDF output out of 10000 (max. 10000000)
 
