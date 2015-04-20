@@ -80,7 +80,8 @@
 %%% partial understandings.  Building on earlier theoretical work, we
 %%% describe concrete implementation plans and some preliminary results.
 %\end{abstract}
-
+%
+%% END OF COMMENTED OUT PART
 
 \section{Introduction} \label{sec:introduction}
 
@@ -132,10 +133,12 @@ In educational applications it would be useful to have an automated tutor that c
 
 In the current paper, we ``flip the script'' and look at what we believe to be a more fundamental problem for AI: computer programs that can themselves learn from feedback.  After all, if it was easy to build great automatic tutors, they would be a part of everyday life.  We look forward to a future when that is the case.
 
-Computational creativity is a challenge within artificial intelligence where feedback plays a vital part [REFS***] \cite{perezyperez10MM,pease10}. Creativity cannot happen in a `silo' but instead is influenced and affected by feedback and interaction with others \cite{csik88,saunders12}. Computational creativity researchers are starting to place more emphasis on social interaction and feedback by computational systems [***EVIDENCE ***]. Still, nearly 3 in 4 papers at the 2014 International Conference for Computational Creativity\footnote{ICCC is  the key international conference for research in computational creativity.} failed to acknowledge the role of feedback or social communication in their computational work on creativity. 
+Computational creativity is a challenge within artificial intelligence where feedback plays a vital part [REFS***] \cite{perezyperez10MM,pease10}. Creativity cannot happen in a `silo' but instead is influenced and affected by feedback and interaction with others \cite{csik88,saunders2012towards}. Computational creativity researchers are starting to place more emphasis on social interaction and feedback by computational systems [***EVIDENCE ***]. Still, nearly 3 in 4 papers at the 2014 International Conference for Computational Creativity\footnote{ICCC is  the key international conference for research in computational creativity.} failed to acknowledge the role of feedback or social communication in their computational work on creativity. 
 
-To highlight and contribute towards modelling feedback as a crucial part of creativity, we propose in this paper a model of computational feedback for creative systems based on Writers Workshops \cite{gabriel2002writer}, a literary collaborative practice that encourages interactive feedback within the creative process. We introduce Writers Workshops (Section \ref{sec:writers-workshop}), discuss their usefulness as a candidate for a computational model of feedback (Section \ref{sec:ww-analysis}) and propose such a model (Section \ref{sec:ww-model}). We reflect on how this model fits with related work encouraging serendipity and emergence in computational models of intelligence and creativity \ref{sec:ww-serendipity}. 
-While we acknowledge that this paper is offering a roadmap for this model rather than a full implementation, we consider how the model could be practically implemented in a computational system and report our initial implementation work (Section \ref{sec:implementation}). %Current computer programs are able to identify patterns and ``close matches'' in data sets from certain domains, like music (David Meredith).  Learning \emph{new} patterns on the fly is harder but potentially quite useful. 
+To highlight and contribute towards modelling feedback as a crucial part of creativity, we propose in this paper a model of computational feedback for creative systems based on Writers Workshops \cite{gabriel2002writer}, a literary collaborative practice that encourages interactive feedback within the creative process. We introduce Writers Workshops (Section \ref{sec:writers-workshop}), discuss their usefulness as a candidate for a computational model of feedback (Section \ref{sec:ww-analysis}) and propose such a model (Section \ref{sec:ww-model}). We partially evaluate our model by reflecting on how it fits with related work encouraging serendipity and emergence in computational models of intelligence and creativity \ref{sec:ww-related}. 
+While we acknowledge that this paper is offering a roadmap for this model rather than a full implementation, we consider how the model could be practically implemented in a computational system and report our initial implementation work (Section \ref{sec:implementation}). We conclude by looking at ways in which this work can be usefully directed in the future.
+
+%Current computer programs are able to identify patterns and ``close matches'' in data sets from certain domains, like music (David Meredith).  Learning \emph{new} patterns on the fly is harder but potentially quite useful. 
 % AJ Don't see what this adds?
 
 
@@ -154,23 +157,70 @@ Minneapolis Writers
 Workshop\footnote{\url{http://mnwriters.org/how-the-game-works/}};
 others are focused on professionals working within a specific genre,
 like the Milford Writers
-Workshop\footnote{\url{http://www.milfordsf.co.uk/about.htm}}.  The
-practices that Gabriel describes are fairly typical.  Authors come
-with work ready to present, and read a short sample, which is then
+Workshop\footnote{\url{http://www.milfordsf.co.uk/about.htm}}.  
+
+The
+practices that Gabriel describes are fairly typical:  
+\begin{itemize}
+\item Authors come
+with work ready to present, and read a short sample.
+\item The sample work is then
 discussed and constructively critiqued by attendees.  Presenting
 authors are not permitted to rebut these comments.  The commentators
 generally summarise the work and say what they have gotten out of it,
 discuss what worked well in the piece, and talk about how it could be
-improved.  The author listens and may take notes; at the end, he or
-she can then ask questions for clarification.  Generally, non-authors
+improved.  
+\item The author listens and may take notes; at the end, he or
+she can then ask questions for clarification.  
+\item Generally, non-authors
 are either not permitted to attend, or are asked to stay silent
 through the workshop, and perhaps sit separately from the
-participating authors/reviewers.  There are similarities between the
+participating authors/reviewers. {\em This is somewhat akin to the ideas about fields of cultural production \cite{bourdieu93}, where value is perceived as coming from interactions between a peer community of cultural producers i.e. specifically those who are active within that field. *** AJ Check I'm not talking rubbish? ***}\footnote{Here we present Writers Workshops as they currently exist; however this last point is debatable. Whether non-authors should be able to participate or not is an interesting avenue for experimentation both in human and computational contexts.}
+\end{itemize}
+
+There are similarities between the
 Writers Workshops and classical practices of group composition
 \cite{jin1975art} and dialectic \cite{dialectique}, and the workshop
 may be considered an artistic or creative space in its own right.
 
-In PLoP workshops, authors present design patterns and pattern
+For example, here's what might happen in a discussion of the first few lines of
+``On Being Malevolent,''. As befitting the AI-theme of this workshop, ``On Being Malevolent'' is a poem written by an early user-defined flow chart
+in the \Fw\ system (known at the time as {\sf Flow})
+\cite{colton-flowcharting}.\footnote{Note that for this dialogue to be
+possible computationally, it would presumably have to be conducted within a
+lightweight process language, as discussed above.  Nevertheless, for
+convenience, the discussion will be presented here as if it was
+conducted in natural language.  Whether contemporary systems have
+adequate natural language understanding to have interesting
+interactions is one of the key unanswered questions of this approach,
+but protocols such as that described later in this paper would be sufficient to
+make the experiment.}
+
+\begin{center}
+\begin{minipage}{.9\columnwidth}
+\begin{dialogue}
+\speak{Flow} ``\emph{I hear the souls of the
+  damned waiting in hell. / I feel a malevolent
+  spectre hovering just behind me / It must be
+  his birthday}.''
+%
+\speak{System A} I think the third line detracts
+from the spooky effect, I don't see why it's
+included.
+%
+\speak{System B} It's meant to be humourous -- in fact it reminds me
+of the poem you presented yesterday.
+%
+\speak{Moderator} Let's discuss one poem at a
+time.
+\end{dialogue}
+\end{minipage}
+\end{center}
+
+
+
+
+The use of Writers Workshop in computational contexts is not an entirely new concept. In PLoP workshops, authors present design patterns and pattern
 languages, or papers about patterns, rather than more traditional
 literary forms like poems, stories, or chapters from novels.  Papers
 must be workshopped at a PLoP or EuroPLoP conference in order to be
@@ -188,24 +238,6 @@ Coplien and Woolf \cite{coplien1997pattern}.  Their patterns include:
 }
 \end{center}
 
-We propose that a similar pattern-based approach should be deployed
-within the Computational Creativity community to design a workshop in
-which the participants are computer systems instead of human authors.
-The annual International Conference on Computational Creativity
-(ICCC), now entering its sixth year, could be a suitable venue.
-Rather than the system's creator presenting the system in a
-traditional slideshow and discussion, or a system ``Show and Tell,''
-the systems would be brought to the workshop and would present their
-own work to an audience of other systems, in a Writers Workshop
-format.  This might be accompanied by a short paper for the conference
-proceedings written by the system's designer describing the system's
-current capabilities and goals.  Subsequent publications might include
-traces of interactions in the Workshop, commentary from the system on
-other systems, and offline reflections on what the system might change
-about its own work based on the feedback it receives.  As in the PLoP
-community, it could become standard to incorporate this sort of workshop
-into the process of peer reviewing journal articles for the new \emph{Journal of
-  Computational Creativity}\footnote{\url{http://www.journalofcomputationalcreativity.cc}}.
 
 \begin{table}[p]
 \begin{tabular}{p{.95\columnwidth}}
@@ -281,6 +313,7 @@ The Writers Workshop potentially could uncover all of these types of error, depe
 
 \section{Computational Model of feedback based on writers workshop}\label{sec:ww-model}
 
+\subsection{Protocol}
 In order to facilitate this sort of interaction, it would be necessary
 for systems to implement a basic protocol related to
 %%
@@ -288,29 +321,23 @@ for systems to implement a basic protocol related to
   feedback}, {\tt questions}, and {\tt
   reflections}.
 %%
-This protocol could be thought of as a light-weight template for
+
+\begin{itemize}
+\item[\textbf{Presentation: }] definition ***
+\item[\textbf{Listening: }] definition ***
+\item[\textbf{Feedback: }] definition ***
+\item[\textbf{Questions: }] definition ***
+\item[\textbf{Reflections: }] definition ***
+\end{itemize}
+This protocol guides participants through the different stages of the Writers Workshop.\footnote{This protocol could be thought of as a light-weight template for
 creating design patterns that guide system-level participation in the
 context specified by Coplien and Woolf's pattern language for writers
-workshops.  Table \ref{tab:reinterpret} uses this framework to recast
-the four ``perfectly'' serendipitous patterns from van Andel --
-\emph{Successful error}, \emph{Side effect}, \emph{Wrong hypothesis},
-and \emph{Outsider} -- in a form that may make them useful to
-developers preparing to enter their systems into the Workshop.
-%
-Further guidelines for structuring and participating in traditional
-writers workshops are presented by Linda Elkin in
-\cite[pp. 201-203]{gabriel2002writer}.  It is not at all clear that
-the same ground rules should apply to computer systems.  For example,
-one of Elkin's rules is that ``Quips, jokes, or sarcastic comments,
-even if kindly meant, are inappropriate.''  Rather than forbidding
-humour, it may be better for individual comments to be rated as
-helpful or non-helpful.  Again, since serendipitous discovery is an
-overarching goal, in the first instance, usefulness and interest might
-be judged in terms of the criteria described in Section
-\ref{sec:evaluation-criteria}.
+workshops.  ***REF }
+
+\subsection{Communications and feedback}
 
 We would need a neutral environment that is not hard to develop for:
-the \Fw\ system described in Section \ref{sec:foundations}
+the \Fw\ system described in Section \ref{sec:implementation}
 offers one such possibility.  With this system, the basic operating
 logic of the Workshop could be spelled out as a flowchart, and
 contributing systems could use flowcharts as the basic medium for
@@ -343,7 +370,28 @@ continuously.\footnote{For a comparison case in computer Go, see
 
 
 
-\section{Embedded evaluation (Case study: Writers Workshop)}
+\section{Considering the Writers Workshop in the context of related work on serendipity}\label{sec:ww-related}
+
+To better understand how the Writers Workshop model helps us advance in our goal of incorporating feedback into artificial creativity, we can consider the model in terms of how it fits into related work. In particular, serendipity is a key concept within creativity, and AI more generally, which the Writers Workshop could assist computational progress. *** ADD INTRO LINKING TEXT ***
+
+Table \ref{tab:reinterpret} uses the protocol framework given in Section \ref{sec:ww-model} to recast
+the four ``perfectly'' serendipitous patterns from van Andel --
+\emph{Successful error}, \emph{Side effect}, \emph{Wrong hypothesis},
+and \emph{Outsider} -- in a form that may make them useful to
+developers preparing to enter their systems into the Workshop.
+%
+Further guidelines for structuring and participating in traditional
+writers workshops are presented by Linda Elkin in
+\cite[pp. 201-203]{gabriel2002writer}.  It is not at all clear that
+the same ground rules should apply to computer systems.  For example,
+one of Elkin's rules is that ``Quips, jokes, or sarcastic comments,
+even if kindly meant, are inappropriate.''  Rather than forbidding
+humour, it may be better for individual comments to be rated as
+helpful or non-helpful.  Again, since serendipitous discovery is an
+overarching goal, in the first instance, usefulness and interest might
+be judged in terms of criteria; see  *** REF TO OUR ICCC PAPER and COG COMP IF ACCEPTED!.
+
+
 
 \paragraph{Writers Workshop: Prepared mind.}
 Each contributing system should come to the workshop with at least a
@@ -380,41 +428,41 @@ would cause the presenting system to change its writing.  A more
 unexpected result would be for a system to change its \emph{genre},
 e.g. to switch from writing poems to writing programs.
 
-Here's what might happen in a discussion of the first few lines of
-``On Being Malevolent,'' written by an early user-defined flow chart
-in the \Fw\ system (known at the time as {\sf Flow})
-\cite{colton-flowcharting}.  Note that for this dialogue to be
-possible, it would presumably have to be conducted within a
-lightweight process language, as discussed above.  Nevertheless, for
-convenience, the discussion will be presented here as if it was
-conducted in natural language.  Whether contemporary systems have
-adequate natural language understanding to have interesting
-interactions is one of the key unanswered questions of this approach,
-but protocols like the ones described above would be sufficient to
-make the experiment.
+%Here's what might happen in a discussion of the first few lines of
+%``On Being Malevolent,'' written by an early user-defined flow chart
+%in the \Fw\ system (known at the time as {\sf Flow})
+%\cite{colton-flowcharting}.  Note that for this dialogue to be
+%possible, it would presumably have to be conducted within a
+%lightweight process language, as discussed above.  Nevertheless, for
+%convenience, the discussion will be presented here as if it was
+%conducted in natural language.  Whether contemporary systems have
+%adequate natural language understanding to have interesting
+%interactions is one of the key unanswered questions of this approach,
+%but protocols like the ones described above would be sufficient to
+%make the experiment.
+%
+%\begin{center}
+%\begin{minipage}{.9\columnwidth}
+%\begin{dialogue}
+%\speak{Flow} ``\emph{I hear the souls of the
+%  damned waiting in hell. / I feel a malevolent
+%  spectre hovering just behind me / It must be
+%  his birthday}.''
+%%
+%\speak{System A} I think the third line detracts
+%from the spooky effect, I don't see why it's
+%included.
+%%
+%\speak{System B} It's meant to be humourous -- in fact it reminds me
+%of the poem you presented yesterday.
+%%
+%\speak{Moderator} Let's discuss one poem at a
+%time.
+%\end{dialogue}
+%\end{minipage}
+%\end{center}
 
-\begin{center}
-\begin{minipage}{.9\columnwidth}
-\begin{dialogue}
-\speak{Flow} ``\emph{I hear the souls of the
-  damned waiting in hell. / I feel a malevolent
-  spectre hovering just behind me / It must be
-  his birthday}.''
-%
-\speak{System A} I think the third line detracts
-from the spooky effect, I don't see why it's
-included.
-%
-\speak{System B} It's meant to be humourous -- in fact it reminds me
-of the poem you presented yesterday.
-%
-\speak{Moderator} Let's discuss one poem at a
-time.
-\end{dialogue}
-\end{minipage}
-\end{center}
-
-To the extent possible, exchanges in the process language should be a
+To the extent possible, exchanges of dialogue such as the example given in Section \ref{sec:writers-workshop} in the process language should be a
 matter of dynamics rather than representation: this is another way to
 say that ``triggers'' should be independent of their ``results.''
 Someone saying something in the workshop does not cause the
@@ -429,7 +477,7 @@ without making reference to another poem.
 
 \paragraph{Writers Workshop: Bridge.}
 
-Here's how the discussion might continue, if the systems go on to
+Here's how the discussion given as example in Section \ref{sec:writers-workshop} might continue, if the systems go on to
 examine the next few lines of the poem.
 \begin{center}
 \begin{minipage}{.9\columnwidth}
@@ -488,8 +536,29 @@ Some images from \emph{Aesthetic Complexity: Practice and Perception in Art \& D
 
 \includegraphics[width=\columnwidth]{./figures/quantity-variety-order.jpg}
 
+\section{Conclusions and Future directions}
+
+Following the example of the PLoP, we argue that Writers Workshops can be deployed
+within the Computational Creativity community to design a workshop in
+which the participants are computer systems instead of human authors.
+The annual International Conference on Computational Creativity
+(ICCC), now entering its sixth year, could be a suitable venue.
+Rather than the system's creator presenting the system in a
+traditional slideshow and discussion, or a system ``Show and Tell,''
+the systems would be brought to the workshop and would present their
+own work to an audience of other systems, in a Writers Workshop
+format.  This might be accompanied by a short paper for the conference
+proceedings written by the system's designer describing the system's
+current capabilities and goals.  Subsequent publications might include
+traces of interactions in the Workshop, commentary from the system on
+other systems, and offline reflections on what the system might change
+about its own work based on the feedback it receives.  As in the PLoP
+community, it could become standard to incorporate this sort of workshop
+into the process of peer reviewing journal articles for the new \emph{Journal of
+  Computational Creativity}.\footnote{\url{http://www.journalofcomputationalcreativity.cc}}
+
 %%COmment out 
 %\bibliographystyle{apacite}
 %\bibliography{./biblio}
-%
-%\end{document}
+
+\end{document}
