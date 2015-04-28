@@ -1,5 +1,27 @@
 \section{Related work}\label{sec:ww-model}
 
+\subsection{Feedback in general terms}
+
+\emph{Feedback} is the central concept in the field of cybernetics. 
+
+Feedback about feedback (\&c for higher orders) is understood to be
+relevant to thinking about \emph{learning} and \emph{communication}
+\cite{geertz1973interpretation}.
+
+These concepts are biologically relevant: for example, immunity (and
+autoimmunity) are examples of biological feedback systems.  They are
+also psychologically relevent: According to Seth (2013), emotional
+states are perception of physiological state but ``cognitive context''
+matters.
+
+\emph{Creativity} is often envisaged as cyclical process
+(e.g.~Dickie's art circle, Colton et al.~Iterative Development
+Expression Appreciation).  There are opportunities for embedded
+feedback at each step, and the process itself is ``akin to'' a
+feedback loop.  However, despite these 
+
+Feedback and social interaction: Cf.~the Human Interaction Ontology.
+
 \subsection{Our previous work}
 
 In earlier work \cite{corneli15iccc,corneli15cc}, we sketched a
@@ -9,18 +31,32 @@ and processes'' and ``described a system that can (sometimes) make
 ``drawing attention to theoretical questions related to program design
 in an autonomous programming context.''
 
-What is most missing in these earlier papers is an implementation.
-Although we do not make up for this in the current paper, we sketch
-concrete implementation plan.  In order to bring in other
-participants, we need a neutral environment that is not hard to
-develop for: the \Fw\ system described in Section
-\ref{sec:implementation} offers one such possibility.  With this
-system, the basic operating logic of the Workshop could be spelled out
-as a flowchart, and contributing systems could use flowcharts as the
-basic medium for sharing their presentations, feedback, and questions.
-Developing around a process language of this sort partially obviates
-the need for participating systems to have strong natural language
-processing capabilities.
+What is most missed in these earlier papers is an implementation.
+Although we do not fully make up for this in the current paper, we
+sketch concrete implementation plan, and describe work that is
+underway.  In order to bring in other participants, we need a neutral
+environment that is not hard to develop for: the \Fw\ system described
+in Section \ref{sec:implementation} offers one such possibility.  With
+this system, the basic operating logic of the Workshop could be
+spelled out as a flowchart, and contributing systems could use
+flowcharts as the basic medium for sharing their presentations,
+feedback, and questions.  Developing around a process language of this
+sort partially obviates the need for participating systems to have
+strong natural language processing capabilities.
+
+\subsection{Learning from feedback by identifying new patterns}
+
+Current computer programs are able to identify known patterns and
+``close matches'' in data sets from certain domains, like music
+\cite{meredith2002algorithms}.  Identifying known patterns is a
+special case of the more general concept of \emph{pattern mining}
+\cite{bergeron2007representation}.  In particular, the ability to
+extract \emph{new} higher order patterns that describe exceptions is
+an example of ``learning from feedback.''  Deep learning and
+evolutionary models increasingly use this sort of idea to facilitate
+strategic discovery \cite{samothrakis2011approximating}.  Similar
+ideas are considered in business application under the heading
+``process mining'' \cite{van2011process}.
 
 \subsection{Communications and feedback}
 
@@ -46,13 +82,12 @@ it does;
 \end{fminipage}
 \end{center}
 
-
-Naturally, variations to the underlying system, protocol, and the
-schedule of events should be considered depending on the needs and
-interests of participants, and several variants can be tried.  On a
-pragmatic basis, if the Workshop proved quite useful to participants,
-it could be revised to run monthly, weekly, or
-continuously.\footnote{For a comparison case in computer Go, see
+Variations to the underlying system, protocol, and the schedule of
+events should be considered depending on the needs and interests of
+participants, and several variants can be tried.  On a pragmatic
+basis, if the Workshop proved quite useful to participants, it could
+be revised to run monthly, weekly, or continuously.\footnote{For a
+  comparison case in computer Go, see
   \url{http://cgos.computergo.org/}.}
 
 \begin{enumerate}[start=2]
@@ -69,20 +104,6 @@ continuously.\footnote{For a comparison case in computer Go, see
 \end{enumerate}
 \item[] What can feedback be about in general terms? \dec{Survey}
 \begin{enumerate}
-\item Patterns that \emph{match} and any \emph{exceptions}. 
-\begin{itemize}
-\item Current computer programs are able to identify known patterns
-  and ``close matches'' in data sets from certain domains, like music
-  \cite{meredith2002algorithms}.  Identifying known patterns is a
-  special case of the more general concept of \emph{pattern mining}
-  \cite{bergeron2007representation}.  In particular, the ability to
-  extract \emph{new} higher order patterns that describe exceptions is
-  an example of ``learning from feedback.''  Deep learning and
-  evolutionary models increasingly use this sort of idea to facilitate
-  strategic discovery \cite{samothrakis2011approximating}.  Similar
-  ideas are considered in business application under the heading
-  ``process mining'' \cite{van2011process}
-\end{itemize}
 \item Progress relative to explicit or adduced \emph{exploration}
   (knowledge and accuracy) or \emph{exploitation} (directional,
   task-based) goals.
@@ -109,25 +130,17 @@ continuously.\footnote{For a comparison case in computer Go, see
   eye toward producing effects like ``serendipity'' and
   ``emergence.''}
 \begin{enumerate}
-\item Section \item Feedback is the fundamental concept in \emph{cybernetics}.  \dec{Definition?}
 \item ``Artificial and natural intelligence are both search'' -- you learn a few concepts the hard way and then use them to understand things you only have one shot at (Metaphors we live by).  Neo-diffusionist hypothesis: culture is like any other feature, if it helps you, you're more likely to keep it.  (Kashima).  Deacon's ``Theory of semantics''.  Human semantics can be replicated by statistical learning on large corpora.  Finch 1993, Bilovich and Bryson 2008.  The 75 second most frequent words give a good match to human semantics.  McDonald and Lowe, check the cosines.  Implicit University of Bath, Macfarlane.  Bryson 2008, Theory of Semantics.  ``What are the things that need to be preserved and what are the things that we can mutate?''  Primates not only remember how people treat themselves, they also remember how they treat each other (Second Order representation).  Evolvability is something that AI reseachers should be getting their hands on.  Dual replicators: culture and biology both evolve.  Within the genome, there are hierarchical representations and genes to flag ``zones of innovation'' (Richard Watson, machine learning, genetics, and evolvability)  Cross-over lets you stay close to the fitness peak (Yifei Wang).  \v{C}a\v{c}e and Bryson 2007, agent based modelling of communication costs, in Emergence and Evolution of Linguistic Communication.  ``What is transmitted is the replicator, but the unit of selection is the vehicle/interactor.''  Simpson's paradox.  Daniel Taylor, Evolution of the Social Contract -- everything is semi-private, disseration.  Lots of ways to create modular systems.  Jekaterina Novikova, transparently synthetic emotions for collaboration.  Swen Gaudl, learning from observation of human players and then coming up with better versions of the game using genetic programming.  London Futurists.  Human language and our values come out of our experiences and our \emph{sociality}.  E.g. punishing someone for being antisocial is contributing to your own good.  ``Chimps are moral patients.''
 \begin{itemize}
 \item (Clark 2013) quotes Ashby.  Homeostatics\ldots Stuff from Anil's talk.
   Wiener 1964 cites Ashby.  Conant and Ashby: ``Every good regulator
   of a system must be a model of that system.''  This leads to the
   ``free energy principle.''  Keep the organism within states in which
-  it will receive the kinds of input it expects.
-\item E.g.~emotional states are perception of physiological state but ``cognitive context'' matters.  (Seth 2013)
-\end{itemize}
-\item Feedback about feedback (\&c for higher orders) is relevant to thinking about \emph{learning} and \emph{communication}
-\item \emph{Creativity} is often envisaged as cyclical process (e.g.~Dickie's
-  art circle, Colton et al.~Iterative
-  Development Expression Appreciation).  There are opportunities for
-  embedded feedback at each step, and the process itself is ``akin
-  to'' a feedback loop.
-\begin{itemize}
-\item A very intuitive point: customer feedback is a big thing, and increasingly present in online commerce and the social web (think e.g.~of Yelp).  The particular challenge here is to have the resources in order to effectively respond to the feedback.
-\item Immunity (and autoimmunity) are examples of biological feedback systems.  Cf.~the Human Interaction Ontology.
+  it will receive the kinds of input it expects. 
+\item A very intuitive point: customer feedback is a big thing, and
+  increasingly present in online commerce and the social web (think
+  e.g.~of Yelp).  The particular challenge here is to have the
+  resources in order to effectively respond to the feedback.
 \item Another philosophical point (maybe we can bring it in earlier)
   is that in the Writers Workshop model, feedback is somehow an
   economic ``externality.''  That is, the author gets the feedback
