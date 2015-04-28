@@ -21,6 +21,18 @@
 \usepackage{enumitem}
 \usepackage{framed}
 
+\usepackage{xparse}
+\newsavebox{\fminipagebox}
+\NewDocumentEnvironment{fminipage}{m O{\fboxsep}}
+ {\par\kern#2\noindent\begin{lrbox}{\fminipagebox}
+  \begin{minipage}{#1}\ignorespaces}
+ {\end{minipage}\end{lrbox}%
+  \makebox[#1]{%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+    \fbox{\usebox{\fminipagebox}}%
+    \kern\dimexpr-\fboxsep-\fboxrule\relax
+  }\par\kern#2
+ }
 % \hypersetup{hidelinks}
 
 \usepackage[xspace,mla]{ellipsis}
@@ -104,9 +116,9 @@ aspects of AI.
 %\input{oldtext}
 
 \input{background}
-\input{discussion}
 \input{survey}
 \input{case-study}
+\input{discussion}
 \input{conclusion}
 
 \bibliographystyle{apacite}
