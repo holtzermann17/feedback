@@ -1,87 +1,88 @@
-%\documentclass[letter]{article}
-%
-%\usepackage{ijcai15}
-%\usepackage{times}
-%
-%\usepackage{eurosym}
-%\usepackage{hyperref}		% clickable references
-%
-%\usepackage{apacite}            % APA style citations
-%\usepackage{apacdoc}
-%
-%\usepackage{amsmath,amssymb}	% math structures and symbols
-%\usepackage{graphicx}		% including of graphics files in various formats
-%\usepackage{amsfonts}
-%\usepackage{dialogue}
-%\usepackage{placeins}
-%\usepackage{tikz}
-%\usetikzlibrary{positioning,backgrounds,fit,arrows,shapes,shadows}
-%\usetikzlibrary{shapes.multipart}
-%\usepackage{wrapfig}
-%\usepackage{enumitem}
-%\usepackage{framed}
-%
-%% \hypersetup{hidelinks}
-%
-%\usepackage[xspace,mla]{ellipsis}
-%
-%\definecolor{myyellow}{RGB}{242,226,149}
-%\definecolor{mygreen}{RGB}{144,238,144}
-%\definecolor{mypink}{RGB}{255,182,193}
-%\definecolor{myorange}{RGB}{255,165,0}
-%\definecolor{myblue}{RGB}{0,204,204}
-%
-%\usepackage{xparse}
-%\NewDocumentCommand\StickyNote{O{4cm}mmO{4cm}}{%
-%\begin{tikzpicture}
-%\node[
-%drop shadow={
-%  shadow xshift=2pt,
-%  shadow yshift=-4pt
-%},
-%inner xsep=7pt,
-%fill=#2,
-%xslant=-0.05,
-%yslant=0.05,
-%inner ysep=10pt
-%] {\parbox[t][#1][c]{#4}{#3}};
-%\end{tikzpicture}%
-%}
-%
-%\urldef{\mailsa}\path|{j.corneli,s.colton}@gold.ac.uk|
-%\urldef{\mailsb}\path|a.pease@dundee.co.uk|
-%
-%\newcommand{\Fw}{{\sf FloWr}}
-%\newcommand{\dec}[1]{\raisebox{.2ex}{$\star$}#1\raisebox{.2ex}{$\star$}}
-%
-%\newcommand{\keywords}[1]{\par\addvspace\baselineskip
-%\noindent\keywordname\enspace\ignorespaces#1}
-%
-%\begin{document}
-%
-%% TITLE INFORMATION
-%\title{Implementing feedback in creative systems}
-%
-%\author{Joseph Corneli\textsuperscript{1} and Anna Jordanous\textsuperscript{2}\\
-%\textsuperscript{1} Department of Computing, Goldsmiths College, University of London\\
-%\textsuperscript{2} School of Computing, University of Kent}
-%
-%\date{today}
-%
-%\maketitle
-%
-%\begin{abstract} 
-%% First attempt
-%%% Various social strategies, ranging from Writers Workshops to open
-%%% source software, pair programming, and design charettes have been
-%%% developed to exploit emergent effects and to develop new shared
-%%% language.  We investigate the feasibility of using designs of this
-%%% sort in multi-agent systems that learn by sharing and discussing
-%%% partial understandings.  Building on earlier theoretical work, we
-%%% describe concrete implementation plans and some preliminary results.
-%\end{abstract}
-%
-%% END OF COMMENTED OUT PART
+\documentclass[letter]{article}
+
+\usepackage{ijcai15}
+\usepackage{times}
+
+\usepackage{eurosym}
+\usepackage{hyperref}		% clickable references
+
+\usepackage{apacite}            % APA style citations
+\usepackage{apacdoc}
+\usepackage{mdframed}
+
+\usepackage{amsmath,amssymb}	% math structures and symbols
+\usepackage{graphicx}		% including of graphics files in various formats
+\usepackage{amsfonts}
+\usepackage{dialogue}
+\usepackage{placeins}
+\usepackage{tikz}
+\usetikzlibrary{positioning,backgrounds,fit,arrows,shapes,shadows}
+\usetikzlibrary{shapes.multipart}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{framed}
+
+% \hypersetup{hidelinks}
+
+\usepackage[xspace,mla]{ellipsis}
+
+\definecolor{myyellow}{RGB}{242,226,149}
+\definecolor{mygreen}{RGB}{144,238,144}
+\definecolor{mypink}{RGB}{255,182,193}
+\definecolor{myorange}{RGB}{255,165,0}
+\definecolor{myblue}{RGB}{0,204,204}
+
+\usepackage{xparse}
+\NewDocumentCommand\StickyNote{O{4cm}mmO{4cm}}{%
+\begin{tikzpicture}
+\node[
+drop shadow={
+  shadow xshift=2pt,
+  shadow yshift=-4pt
+},
+inner xsep=7pt,
+fill=#2,
+xslant=-0.05,
+yslant=0.05,
+inner ysep=10pt
+] {\parbox[t][#1][c]{#4}{#3}};
+\end{tikzpicture}%
+}
+
+\urldef{\mailsa}\path|{j.corneli,s.colton}@gold.ac.uk|
+\urldef{\mailsb}\path|a.pease@dundee.co.uk|
+
+\newcommand{\Fw}{{\sf FloWr}}
+\newcommand{\dec}[1]{\raisebox{.2ex}{$\star$}#1\raisebox{.2ex}{$\star$}}
+
+\newcommand{\keywords}[1]{\par\addvspace\baselineskip
+\noindent\keywordname\enspace\ignorespaces#1}
+
+\begin{document}
+
+% TITLE INFORMATION
+\title{Implementing feedback in creative systems}
+
+\author{Joseph Corneli\textsuperscript{1} and Anna Jordanous\textsuperscript{2}\\
+\textsuperscript{1} Department of Computing, Goldsmiths College, University of London\\
+\textsuperscript{2} School of Computing, University of Kent}
+
+\date{today}
+
+\maketitle
+
+\begin{abstract} 
+% First attempt
+%% Various social strategies, ranging from Writers Workshops to open
+%% source software, pair programming, and design charettes have been
+%% developed to exploit emergent effects and to develop new shared
+%% language.  We investigate the feasibility of using designs of this
+%% sort in multi-agent systems that learn by sharing and discussing
+%% partial understandings.  Building on earlier theoretical work, we
+%% describe concrete implementation plans and some preliminary results.
+\end{abstract}
+
+% END OF COMMENTED OUT PART
 
 
 \section{Implementation plans and preliminary results}\label{sec:implementation}
@@ -231,3 +232,4 @@ may be considered an artistic or creative space in its own right.
 \end{enumerate}
 \end{enumerate}
 \end{mdframed}
+\end{document}
