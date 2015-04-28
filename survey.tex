@@ -19,12 +19,13 @@ Feedback and social interaction: Cf.~the Human Interaction Ontology.
 \subsection{Feedback in computational creativity}
 
 \emph{Creativity} is often envisaged as cyclical process
-(e.g.~Dickie's art circle, Colton et al.~Iterative Development
-Expression Appreciation).  There are opportunities for embedded
-feedback at each step, and the process itself is ``akin to'' a
-feedback loop.  However, despite these strong intimations of the
-central importance of feedback in the creative process, our sense is
-that feedback has not been given a central place in research on
+(e.g.~Dickie's \citeyear{dickie1984art} art circle, Pease and Colton's
+\citeyear{pease2011computational} Iterative
+Development-Expression-Appreciation model).  There are opportunities
+for embedded feedback at each step, and the process itself is ``akin
+to'' a feedback loop.  However, despite these strong intimations of
+the central importance of feedback in the creative process, our sense
+is that feedback has not been given a central place in research on
 computational creativity.  In particular, current systems in
 computational creativity, almost as a rule, do \emph{not} consume or
 evaluate the work of other systems.\footnote{An exception that proves
@@ -32,27 +33,17 @@ evaluate the work of other systems.\footnote{An exception that proves
   (\url{https://twitter.com/AppreciationBot}), which is a reactive
   automaton that ``appreciates'' tweets from {\sf MuseumBot}.}
 
-\subsection{Our previous work}
-
-In earlier work \cite{corneli15iccc,corneli15cc}, we sketched a
-``theory of poetics rooted in the making of boundary-crossing objects
-and processes'' and ``described a system that can (sometimes) make
-`highly serendipitous' creative advances in computer poetry'' while
-``drawing attention to theoretical questions related to program design
-in an autonomous programming context.''
-
-What is most missed in these earlier papers is an implementation.
-Although we do not fully make up for this in the current paper, we
-sketch concrete implementation plan, and describe work that is
-underway.  In order to bring in other participants, we need a neutral
-environment that is not hard to develop for: the \Fw\ system described
-in Section \ref{sec:implementation} offers one such possibility.  With
-this system, the basic operating logic of the Workshop could be
-spelled out as a flowchart, and contributing systems could use
-flowcharts as the basic medium for sharing their presentations,
-feedback, and questions.  Developing around a process language of this
-sort partially obviates the need for participating systems to have
-strong natural language processing capabilities.
+\citeA{gervas2014reading} theorise a creative cycle of narrative
+development as involving a Composer and an Interpreter, in such a way
+that the Composer has internalised the interpretation functionality.
+Individual creativity is not the poor relation of social creativity,
+but it's mirror image.  Nevertheless, even when computer models
+explicitly involve multiple agents and simulate social creativity
+\cite<like>{saunders2001digital}, they rarely make the jump to involve
+multiple systems.  The ``air gap'' between computationally creative
+systems is very different from the historical situation in human
+creativity, in which different creators and indeed different cultural
+domains interact vigourously.
 
 \subsection{Learning from feedback by identifying new patterns}
 
@@ -99,6 +90,33 @@ basis, if the Workshop proved quite useful to participants, it could
 be revised to run monthly, weekly, or continuously.\footnote{For a
   comparison case in computer Go, see
   \url{http://cgos.computergo.org/}.}
+
+\subsection{Our previous work}
+
+In earlier work \cite{corneli15iccc,corneli15cc}, we used the idea of
+dialogue in a Writers Workshop framework to sketch a ``theory of
+poetics rooted in the making of boundary-crossing objects and
+processes'' and described (at the schematic level) ``a system that can
+(sometimes) make `highly serendipitous' creative advances in computer
+poetry'' while ``drawing attention to theoretical questions related to
+program design in an autonomous programming context.''
+
+What one misses most in our earlier papers is a concrete
+implementation.  Although we do not fully make up for this in the
+current paper, we will describe work that is now underway.  In order
+to bring in other participants, we need a neutral environment that is
+not hard to develop for: the \Fw\ system described in Section
+\ref{sec:implementation} offers one such possibility.  With this
+system, the basic operating logic of the Workshop could be spelled out
+as a flowchart, and contributing systems could use flowcharts as the
+basic medium for sharing their presentations, feedback, and questions.
+Developing around a process language of this sort partially obviates
+the need for participating systems to have strong natural language
+processing capabilities.
+
+\begin{mdframed}
+{\large Some things we can (potentially) feed into the survey above,
+  or delete if they are not useful.}
 
 \begin{enumerate}[start=2]
 \item \textbf{Here we refine the idea and turn it into a general model
@@ -180,3 +198,4 @@ be revised to run monthly, weekly, or continuously.\footnote{For a
 \end{itemize}
 \end{enumerate}
 \end{enumerate}
+\end{mdframed}
