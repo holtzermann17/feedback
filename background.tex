@@ -193,32 +193,79 @@ the systems had focused on exchanging and discussing more formal
 objects throughout.
 
 
-
 \subsection{How the Writers Workshop can lead to computational serendipity}
 
 Learning involves engaging with the unknown, unfamiliar, or unexpected
 and synthesising new understanding \cite{deleuze1994difference}.  In
-this regard learning is somewhat \emph{serendiptious}, even when it is
-planned as part of a course of study or another learning exercise.  In the
-workshop setting, learning can develop in a number of unexpected
-ways, and participating systems need to be prepared for this.
+the workshop setting, learning can develop in a number of unexpected
+ways, and participating systems need to be prepared for this.  One way
+to evaluate the idea of a Writers Workshop is to ask whether it can
+support learning that is in some sense \emph{serendiptious}, in other
+words, whether it can support discovery and creative invention that we
+simply couldn't plan for or orchestrate in another way.
 
 Figure \ref{fig:paper-prototype} shows a paper prototype showing how
-one of the ``patterns of serendipity'' from \citeA{pek} might be
-modelled in a workshop-like setting.  Table \ref{tab:reinterpret}
-adapts four of these patterns -- \emph{Successful error}, \emph{Side
-  effect}, \emph{Wrong hypothesis}, and \emph{Outsider} -- in a form
-that may make them useful to developers preparing to enter their
-systems into the Workshop.  This is a small seed collection of
-heuristics that would complement basic knowledge relevant to the
-artefacts that are discussed, e.g., for poetry, textual features like
-repetition and narrative \cite{corneli15iccc}.  In a typical Writers
-Workshop, feedback will inspire the presenter to revise a draft of
-work in progress.  A potentially more unexpected result would be
-formulating a new heuristic for participation, or understanding a new
-domain construct.  But it is just this sort of higher-level learning
-from experience that we would like our systems to be able to support.
+one of the ``patterns of serendipity'' that were collected by
+\citeA{pek} might be modelled in a workshop-like dialogue sequence.
+The patterns also help identify opportunities for serendipity at
+several key steps in the workshop sequence.
 
+\paragraph{Pattern: \emph{Successful error}.}  Van Andel describes the
+creation of Post-it\texttrademark\ Notes at 3M.  One of the
+instrumental steps was a series of internal seminars in which 3M
+employee Spencer Silver described an invention he was sure was
+interesting, but was unsure how to turn into a useful product: weak
+glue.  The key prototype that came years later was a sticky bookmark,
+created by Arthur Fry.  In the Writers Workshop, authors similarly
+have the opportunity to share things that they find interesting, but
+that they are not certain about.  The author may want to ask a
+specific question about their creation: Does $x$ work better than $y$?
+They may have flag certain parts of the work as especially meaningful
+or problematic.  They may think that a certain portion of the text is
+interesting or important, without being sure why.  Although there is
+no guarantee that a participating critic will be able to take these
+matters forward, sometimes they do -- and the workshop environment
+will produce something that the author wouldn't have thought of.
+
+\vspace{-3ex}
+\paragraph{Pattern: \emph{Outsider}.}  Another example from van Andel considers
+the case of a mother whose son was aflicted by a congenital cateract,
+who suggested to her doctor that rubella during pregnancy may have
+been the cause.  In the workshop setting, someone who is not an
+``expert'' may come up with a sensible idea or suggestion based on
+their own prior experience.  Indeed, these suggestions may be more
+sensible than the ideas of the author, who may be to close to the work
+to notice radical improvements.  
+
+\vspace{-3ex}
+\paragraph{Pattern: \emph{Wrong hypothesis}.}  A third example describes the discovery that lithium
+can have a therapeutic effect in cases of mania.  Originally, lithium
+carbonate had merely been used a control by John Cade, who was
+interested in the effect of effect of uric acid in soluble lithium
+urate.  Cade was searching for causal factors in mania, not therapies
+for the condition: but he found that lithium had an unexpected calming
+effect.  Similarly, in the workshop, the auhtor may think that a given
+aspect of their creation is the interesting ``active ingredient'' and
+it may turn out that another aspect of the work is more interesting to
+critics.
+
+\vspace{-3ex}
+\paragraph{Pattern: \emph{Side effect}.}  A fourth example described by van Andel concerns
+Ernest Huant's discovery that nicotinamide, which he used to treat
+side-effects of radiation therapy, also proved efficacious against
+tuberculosis.  In the workshop setting, one of the most important
+places where a side-effect may occur concerns feedback from the critic
+to the author.  In the simple case, feedback may simply trigger
+revisions to the work under discussion.  In a more general, and more
+unpredictable case, feedback may trigger broader revisions to the
+generative codebase.  
+
+\bigskip
+
+This collection of patterns shows the room for unexpected results 
+coming from the communication between author and critics.   This
+suggests several guidelines for system development that will be discussed
+in a later section.
 
 Further guidelines for structuring and participating in traditional
 writers workshops are presented by Linda Elkin in
@@ -239,52 +286,7 @@ The Writers Workshop potentially could uncover all of these types of error, depe
 
 
 
-\begin{table}[p]
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Successful error}}  \\[.1cm]
-\emph{Example}:  Post-it\texttrademark\ notes \\[.1cm]
-{\bf context:} Systems share interesting ideas even if they don't know directly how they will be useful.  \\
-{\bf problem:} Systems should \emph{listen} with interest, too. \\
-{\bf solution:} Listening systems can become more invested by remixing what they hear.\\
-{\bf rationale:} If meaning follows usage, then using material in different ways can help to make meaning. Building robust meaning can take a long time. \\
-{\bf resolution:} This heuristic can remind us to document what doesn't work and why, as well as what does.\\
-\end{tabular}
-\medskip
 
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Side effect}}  \\[.1cm]
-\emph{Example}:  Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
-{\bf context:} Presentations are experiments, and we don't know what the result will be. \\
-{\bf problem:} Listeners need to be able to convey the way they are affected. \\
-{\bf solution:} Feedback routines should report on the listener's ``sensory experience.''  This then needs to be integrated by the presenter.\\
-{\bf rationale:} Different participants will have different ways of seeing things.\\
-{\bf resolution:} Using this heuristic requires presenters to form and test hypotheses, and requires participants to communicate effectively about internal states. \\
-\end{tabular}
-\medskip
-
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Wrong hypothesis}}  \\[.1cm]
-\emph{Example}:  Lithium, used in a control study, had an unexpected calming effect. \\[.1cm]
-{\bf context:} If presentations are experiments, they should have a control. \\
-{\bf problem:} But all listeners are ``guinea pigs''.\\
-{\bf solution:} The presenter should make a model of the text that is being presented and note the parts that are presumed to be ``active ingredients.'' \\
-{\bf rationale:} This will help focus on the most interesting and problematic parts of the text and conversation.\\
-{\bf resolution:} This heuristic clarifies the nature of the experiment, and what may constitute surprising feedback. \\
-\end{tabular}
-\medskip
-
-\begin{tabular}{p{.95\columnwidth}}
-{\bf\emph{Outsider}}  \\[.1cm]
-\emph{Example}:  A mother suggests a new hypothesis to a doctor. \\[.1cm]
-{\bf context:} The presenter aims learn from the critics, and the critics are here to help. \\
-{\bf problem:} Can the critics learn as well?\\
-{\bf solution:} Critics can draw on ``reverse feedback'' in the form of {\tt questions} asked by the presenter.\\
-{\bf rationale:} This can help critics learn how to give clearer feedback.\\
-{\bf resolution:} This heuristic points to the relevance of building models of \emph{others'} mental models.\\
-\end{tabular}
-\vspace{.1cm}
-\caption{Reinterpreting van Andel's patterns of serendipity as heuristics to use in a computational Writers Workshop\label{tab:reinterpret}}
-\end{table}
 
 
 
