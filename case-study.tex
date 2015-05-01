@@ -1,4 +1,4 @@
-\section{Case study: Flowcharts with Feedback} \label{sec:implementation}
+\section{Case study: Flowcharts and Feedback} \label{sec:implementation}
 
 This section describes work that is currently underway to implement the
 Writers Workshop model, not only within one system but as a new paradigm
@@ -6,7 +6,7 @@ for collaboration among disparate projects.  In order to
 bring in other participants, we need a neutral environment that is not
 hard to develop for: the \Fw\ system mentioned in Section
 \ref{sec:ww-model} offers one such possibility.  The basic primary
-objects in this system are \emph{flowcharts}, which are comprised of
+objects in the \Fw\ system are \emph{flowcharts}, which are comprised of
 interconnected \emph{process nodes}
 \cite{charnley2014flowr,colton-flowcharting}.  Process nodes specify
 input and output types, and internal processing can be implemented in
@@ -31,23 +31,22 @@ follow:
 In a further evolution of the system, the sequence of steps in a
 Writers Workshop could itself be spelled out as a flowchart.  The
 process of reading a poem could be conceptualised as generating a
-flowchart-like semantic graph.  Feedback could be modelled as
+flowchart-like semantic graph  \cite{harrington2007asknet,francisco2006automated}.  Feedback could be modelled as
 annotations to a text, including suggested edits.  These markup
-structures could themselves be expressed as flowcharts, or semantic
-graphs \cite{harrington2007asknet,francisco2008ontology}.  Developing a standardised set of markup structures, along
-with moves that take place in the several stages of the workshop may
-partially obviate the need for strong natural language processing at
-the start.  Thus, we could agree that {\tt observations} will consist
-of RDFa markup that connects the text to public URIs using a limited
+directives could themselves be expressed as flowcharts.
+A standardised set of markup structures may
+partially obviate the need for strong natural language understanding, at
+least in interagent communication.  Thus, we could agree that {\tt observations} will consist
+of stand-off annotations that connect textual passages to public URIs using a limited
 comparison vocabulary, and {\tt suggestions} will consist of simple
-stand-off line-edits which may themselves be marked up.  These
+stand-off line-edits, which may themselves be marked up with rationale.  These
 restrictions, and similar restrictions around constrained turn-taking,
 could be progressively widened in future versions of the system.
 %
 The way the poems that are generated, the models of poems that are
 created, and the way the feedback is generated, all depend on the
 contributing system's body of code and prior experience, which may
-vary widely between participating systems.  In the list below, all of
+vary widely between participating systems.  In the list of functional steps below, all of
 the functions could have a subscripted ``$\mathcal{E}$'', which is
 omitted throughout.  This path dependence is the reason why results
 will be different from what the individual participating systems would
@@ -93,7 +92,7 @@ If systems can share code (as in our sample dialogue in Section
 \ref{sec:dialogue-example}) this will help with the
 rationale-generating step, and may also facilitate direct updates to
 the codebase.  However, shared code may be more suitably placed into
-the common pool of resources available to FloWr than copied over as
+the common pool of resources available to \Fw\ than copied over as
 new ``intrinsic'' features of an agent.
 
 Although different systems with different approaches and histories are
@@ -107,3 +106,10 @@ programmatic feedback to define fitness functions.  The role of
 temporality is interesting: if the Workshop takes place in real time,
 this will require different approaches to composition that takes place
 offline \cite{perez2013rolling}.
+%
+Complementing these ``macro-level'' considerations, it is also worth
+commenting on the potential role of ``micro-level'' feedback within
+flowcharts.  Local evaluation of output from a predecessor node could
+feed backwards through the flowchart, similar to backpropagation in
+neural networks.  This would rely on a a reduced version of the
+functional schema described above.
