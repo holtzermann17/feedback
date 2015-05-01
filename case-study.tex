@@ -1,6 +1,8 @@
 \section{Case study: Flowcharts with Feedback} \label{sec:implementation}
 
-This section describes work that is currently underway.  In order to
+This section describes work that is currently underway to implement the
+Writers Workshop model, not only within one system but as a new paradigm
+for collaboration among disparate projects.  In order to
 bring in other participants, we need a neutral environment that is not
 hard to develop for: the \Fw\ system mentioned in Section
 \ref{sec:ww-model} offers one such possibility.  The basic primary
@@ -31,8 +33,8 @@ Writers' Workshop could itself be spelled out as a flowchart.  The
 process of reading a poem could be conceptualised as generating a
 flowchart-like semantic graph.  Feedback could be modelled as
 annotations to a text, including suggested edits.  These markup
-structures could themselves be expressed as flowcharts or semantic
-graphs.  Developing a standardised set of markup structures, along
+structures could themselves be expressed as flowcharts, or semantic
+graphs \cite{harrington2007asknet,francisco2006automated}.  Developing a standardised set of markup structures, along
 with moves that take place in the several stages of the workshop may
 partially obviate the need for strong natural language processing at
 the start.  Thus, we could agree that {\tt observations} will consist
@@ -41,7 +43,7 @@ comparison vocabulary, and {\tt suggestions} will consist of simple
 stand-off line-edits which may themselves be marked up.  These
 restrictions, and similar restrictions around constrained turn-taking,
 could be progressively widened in future versions of the system.
-
+%
 The way the poems that are generated, the models of poems that are
 created, and the way the feedback is generated, all depend on the
 contributing system's body of code and prior experience, which may
@@ -86,12 +88,12 @@ to consider how individual elements of feedback can ``snowball'' and
 go beyond line-edits to a specific poem to much more fundamental
 changes in the way the presenting agent writes poetry.  Here methods
 for pattern mining, discussed in Section
-\ref{ref:related-computational-serendipity} are particularly relevant.
-If systems can share the code (as in our sample dialogue in Section
+\ref{ref:related-computational-serendipity}, are particularly relevant.
+If systems can share code (as in our sample dialogue in Section
 \ref{sec:dialogue-example}) this will help with the
 rationale-generating step, and may also facilitate direct updates to
 the codebase.  However, shared code may be more suitably placed into
-the common pool of resources available to FloWr than re-copied as
+the common pool of resources available to FloWr than copied over as
 new ``intrinsic'' features of an agent.
 
 Although different systems with different approaches and histories are
