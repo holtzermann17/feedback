@@ -1,42 +1,58 @@
 \section{Concluding discussion and future directions}
 
- We have described a \emph{general} and \emph{computationally feasible}  
- model for using feedback in AI systems, particularly creative systems. 
- The Writers Workshop concept, borrowed from creative writing, is transformed into a model of a 
- structured approach to eliciting,  processing and learning from feedback. 
-To better evaluate how the Writers Workshop model helps us
-  advance in our goal of incorporating feedback into artificial
-  creativity, we critically considered how the model fits into
-  related work. In particular, we found that serendipity, a key concept within
-  creativity and AI more generally, is a concept with which the Writers Workshop model could
-  assist computational progress.
+ We have described a \emph{general} and \emph{computationally
+   feasible} model for using feedback in AI systems, particularly
+ creative systems.  The Writers Workshop concept, borrowed from
+ creative writing, is transformed into a model of a structured
+ approach to eliciting, processing and learning from feedback.  To
+ better evaluate how the Writers Workshop model helps us advance in
+ our goal of incorporating feedback into artificial creativity, we
+ critically considered how the model fits into related work. In
+ particular, we found that serendipity, a key concept within
+ creativity and AI more generally, is a concept with which the Writers
+ Workshop model could assist computational progress.
+In this respect, we should highlight the difference between
+``global'' analytics describing the collection of nodes and
+flowcharts in the FloWr ecosystem, and the path-dependent
+analysis that takes place in a workshop setting.
 
-In practical terms, our pilot implementation work (Section \ref{sec:implementation}) shows that the model transfers across to computational implementation. The practical work highlights various considerations to be acknowledged when
- developing systems using the Writers Workshop model:
- [***JOE, ANYTHING TO ADD AS A RESULT OF THE PRACTICAL WORK SO FAR IMPLEMENTING THE MODEL? **]
+Our preliminary implementation work (Section \ref{sec:implementation}) shows
+that the model can be transfered to a functional implementation.  This
+work highlights several considerations relevant to further work with
+the Writers Workshop model:
 
 \begin{itemize}
 \item Each contributing system should come to the workshop with at
-  least a basic awareness of the workshop protocol, with work to share, and
-  prepared to give constructive feedback to other systems.  
-  \item The
-  workshop itself needs to be prepared, with a suitable communication
-  platform and a moderator.  
- \item  A controlled vocabulary for communications and 
-  interaction would be a worthwhile pursuit of future research, perhaps based on
-  an ontology such as the Interaction Network Ontology.\footnote{The Interaction Network Ontology is documented at http://www.ontobee.org/browser/index.php?o=INO . Its URI is http://svn.code.sf.net/p/ino/code/trunk/src/ontology/INO.owl .}
-  \item   To get value out of the
-  experience, systems (and their wranglers) should ideally have
-  questions they are investigating.  
-  \item Systems should be prepared to
-  give feedback, and to carry out evaluations of the helpfulness (or
-  not) of feedback from other systems and of the experience overall.
-  \end{itemize}
+  least a basic awareness of the workshop protocol, with work to
+  share, and prepared to give constructive feedback to other systems.
+\item The workshop itself needs to be prepared, with a suitable
+  communication platform and a moderator or global flowchart for
+  moving the discussion from step to step.
+ \item A controlled vocabulary for communications and interaction
+   would be a worthwhile pursuit of future research, perhaps based on
+   an ontology, inspired by the Interaction Network
+   Ontology.\footnote{The Interaction Network Ontology describes
+     interactions within humans as opposed to within human societies;
+     a \emph{Social} Interaction Network Ontology does not seem to
+     exist at present.  The Interaction Network Ontology is documented
+     at \url{http://www.ontobee.org/browser/index.php?o=INO}.  Its URI
+     is
+     \url{http://svn.code.sf.net/p/ino/code/trunk/src/ontology/INO.owl}.}
+\item In order to get the most value out of the workshop experience,
+  systems (and their wranglers) should ideally have questions they are
+  investigating.  As discussed above, prior experience plays an
+  important role in every step.  This opens up a range of issues for
+  further research on modeling motivations and learning from
+  experience.
+\item Systems should be prepared to give feedback, and to carry out
+  evaluations of the helpfulness (or not) of feedback from other
+  systems and of the experience overall.
+\end{itemize}
   
   Developing systems that could successfully navigate this
   collaborative exercise would be a significant advance in the field
   of computational creativity.  Since the experience is about learning
   rather than winning, there is little motivation to ``game the
-  system'' (cf. \citeNP{lenat1983eurisko}). Instead the emphasis is squarely upon 
-  mutual benefit: computational systems
-  helping to develop each other through communication and feedback.
+  system'' (cf. \citeNP{lenat1983eurisko}). Instead the emphasis is
+  squarely upon mutual benefit: computational systems helping to
+  develop each other through communication and feedback.
