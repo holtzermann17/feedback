@@ -2,13 +2,11 @@
 
 % \subsection{Feedback in general terms}
 
-In considering the potential and contribution of the Writers Workshop model outlined in Section \ref{sec:writers-workshop}, we now consider how the [*** INTRO AS TO WHY OUR STUFF WILL SAVE THE WORLD AT LEAST 3 percent ***] [TURN THIS INTO AN INTRODUCTORY SECTION 1-2 PARAGRAPHS ON HOW FEEDBACK IS IMPORTANT AND THE DIFFERENT FORMS IN WHICH IT HAS COME UP IN AI BEFORE - THEN NARROW DOWN TO LOOK MORE SPECIFICALLY AT MATTERS RELEVANT TO THE WW MODEL]
+In considering the potential and contribution of the Writers Workshop model outlined in Section \ref{sec:writers-workshop}, we posit that the Writers Workshop model is useful for encouraging feedback in computational systems, and in particular systems that are designed to be creative or serendipitous. 
 
-Feedback has long been a central concept in AI-related fields such as cybernetics \cite{ashby1952,seth2015cybernetic}. QUOTE
-
-Feedback about feedback (\&c for higher orders) is understood to be
+Feedback has long been a central concept in AI-related fields such as cybernetics \cite{ashby1952,seth2015cybernetic}. Feedback about feedback (\&c for higher orders) is understood to be
 relevant to thinking about \emph{learning} and \emph{communication}
-\cite{bateson+steps+2000}.
+\cite{bateson+steps+2000}. We now consider the importance of the roles that communicative feedback play in computational creativity and computational serendipity and discuss previous related work in incorporating feedback into such computational systems.
 
 % These concepts are biologically relevant: for example, immunity (and
 %autoimmunity) are examples of biological feedback systems.  They are
@@ -20,17 +18,17 @@ relevant to thinking about \emph{learning} and \emph{communication}
 
 \subsection{Feedback in computational creativity} \label{ref:related-computational-creativity}
 
-\emph{Creativity} is often envisaged as cyclical process
+\emph{Creativity} is often envisaged as involving cyclical processes
 (e.g.~Dickie's \citeyear{dickie1984art} art circle, Pease and Colton's
 \citeyear{pease2011computational} Iterative
 Development-Expression-Appreciation model).  There are opportunities
-for embedded feedback at each step, and the process itself is ``akin
+for embedded feedback at each step, and the creative process itself is ``akin
 to'' a feedback loop.  However, despite these strong intimations of
 the central importance of feedback in the creative process, our sense
 is that feedback has not been given a central place in research on
 computational creativity.  In particular, current systems in
 computational creativity, almost as a rule, do \emph{not} consume or
-evaluate the work of other systems.\footnote{An exception that proves
+evaluate the work of other systems.\footnote{An exception to
   the rule is Mike Cook's {\sf AppreciationBot}
   (\url{https://twitter.com/AppreciationBot}), which is a reactive
   automaton that ``appreciates'' tweets from {\sf MuseumBot}.}
@@ -45,18 +43,22 @@ explicitly involve multiple agents and simulate social creativity
 multiple systems.  The ``air gap'' between computationally creative
 systems is very different from the historical situation in human
 creativity, in which different creators and indeed different cultural
-domains interact vigourously \cite{geertz1973interpretation}.
+domains interact vigorously \cite{geertz1973interpretation}.
 
 \subsection{Feedback in computational serendipity} \label{ref:related-computational-serendipity}
 
 The term computational serendipity is rather new, but its foundations
-are well established.  \citeA{grace2014using} examine \emph{surprise}
+are well established in prior research.  
+
+\citeA{grace2014using} examine \emph{surprise}
 in computing, seeking to ``adopt methods from the
 field of computational creativity [$\ldots$] to the generation of
 scientific hypotheses.''  This is an example of an effort focused on
-computational \emph{invention}. % (Say more here, cite Pease paper.)
+computational \emph{invention}. % (Say more here, cite Pease paper.) 
+% AJ: can't remember what was the 'more' we wanted to say here?
 
-Current computer programs are able to identify known patterns and
+An area of AI where serendipity can be argued to play an important part is 
+in pattern matching. Current computer programs are able to identify known patterns and
 ``close matches'' in data sets from certain domains, like music
 \cite{meredith2002algorithms}.  Identifying known patterns is a
 special case of the more general concept of \emph{pattern mining}
@@ -68,13 +70,23 @@ strategic discovery \cite{samothrakis2011approximating}.  Similar
 ideas are considered in business applications under the heading
 ``process mining'' \cite{van2011process}.
 
+In earlier work \cite{corneli15cc,corneli15iccc}, we used the idea of
+dialogue in a Writers Workshop framework to sketch a ``theory of
+poetics rooted in the making of boundary-crossing objects and
+processes'' and described (at a schematic level) ``a system that can
+(sometimes) make `highly serendipitous' creative advances in computer
+poetry'' while ``drawing attention to theoretical questions related to
+program design in an autonomous programming context.''
+
 \subsection{Communications and feedback}
 
-Gordon Pask's conversation theory, reviewed in
+The Writers Workshop heavily relies on communication of feedback within the workshop.
+ Gordon Pask's conversation theory, reviewed in
 \cite{conversation-theory-review,boyd2004conversation}, goes
 considerably beyond the simple process language of the workshop,
-although there are structural parallels.  In a basic Pask-style
-learning conversation \cite[p. 190]{boyd2004conversation}: 
+although there are structural parallels.  We see that a basic Pask-style
+learning conversation bears many similarities to the Writers Workshop model of communicative feedback
+\cite[p. 190]{boyd2004conversation}: 
 
 \begin{center}
 \begin{fminipage}{.8\columnwidth}
@@ -100,15 +112,7 @@ be revised to run monthly, weekly, or continuously.\footnote{For a
   comparison case in computer Go, see
   \url{http://cgos.computergo.org/}.}
 
-%\subsection{Our previous work}
 
-In earlier work \cite{corneli15cc,corneli15iccc}, we used the idea of
-dialogue in a Writers Workshop framework to sketch a ``theory of
-poetics rooted in the making of boundary-crossing objects and
-processes'' and described (at a schematic level) ``a system that can
-(sometimes) make `highly serendipitous' creative advances in computer
-poetry'' while ``drawing attention to theoretical questions related to
-program design in an autonomous programming context.''
 
 
 
